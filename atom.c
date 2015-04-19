@@ -420,9 +420,9 @@ void page3area1atom0sub1op0(){
 void page3area1atom0sub1op1(){
 	ParaArray[FarawayMode] = pluse_mode;	
 }
-//远程控制参数选择，选为双位式
+//远程控制参数选择，选为计算机式
 void page3area1atom0sub1op2(){
-	//ParaArray[FarawayMode] = double_mode;
+	ParaArray[FarawayMode] = pc_mode;
 }
 //远程控制参数选择，选为模拟量式
 void page3area1atom0sub1op3(){

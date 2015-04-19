@@ -294,10 +294,10 @@ void page2area1(void){
 					ch_label[5].code[1] = 87;
 					ch_label[5].code[2] = 6;
 					break;
-				case double_mode:
-					ch_label[5].code[0] = 91;
-					ch_label[5].code[1] = 43;
-					ch_label[5].code[2] = 6;
+				case pc_mode:
+					ch_label[5].code[0] = 169;
+					ch_label[5].code[1] = 170;
+					ch_label[5].code[2] = 171;
 					break;
 				case analog_mode:
 					ch_label[5].code[0] = 88;
@@ -1819,14 +1819,14 @@ void page3area3sub1()
 			ch_label[3].code[1] = 87;
 			ch_label[3].code[2] = 6;
 			ch_label[3].type = 'c';
-			//第三行第2列   双位式
-			//wz 不要了
+			//第三行第2列   计算机
+			//wz 485通信控制
 			ch_label[5].loc.x = 40;
 			ch_label[5].loc.y = 48;
 			ch_label[5].length = 3;
-			ch_label[5].code[0] = 91;
-			ch_label[5].code[1] = 37;
-			ch_label[5].code[2] = 6;
+			ch_label[5].code[0] = 169;
+			ch_label[5].code[1] = 170;
+			ch_label[5].code[2] = 171;
 			ch_label[5].type = 'c';
 		  		
 			//第四行第2列   模拟式 
@@ -1838,7 +1838,7 @@ void page3area3sub1()
 			ch_label[4].code[2] = 6;
 			ch_label[4].type = 'c';
 	
-			LabelLen = 5;
+			LabelLen = 6;
 			LabelLenE = 0;
 			InputOpLen = 0;
 			InputOpRec = 0;
@@ -1850,16 +1850,16 @@ void page3area3sub1()
 			option[1].loc.x = 0;
 			option[1].loc.y = 48;
 			option[1].Func = page3area1atom0sub1op1; 
-			/*
+			
 			option[2].loc.x = 32;
-			option[2].loc.y = 32;
+			option[2].loc.y = 48;
 			option[2].Func = page3area1atom0sub1op2;
-			*/
-			option[2].loc.x = 32;
-			option[2].loc.y = 32;
-			option[2].Func = page3area1atom0sub1op3; 
+			
+			option[3].loc.x = 32;
+			option[3].loc.y = 32;
+			option[3].Func = page3area1atom0sub1op3; 
 	
-			OptionLen = 3;
+			OptionLen = 4;
 			OptionLoc = 0;
 			break;
 	}	

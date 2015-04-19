@@ -42,7 +42,7 @@
 #define	 LocallyMode		10
 #define	 pluse_mode     	901
 #define  hold_mode      	902
-#define  double_mode    	903
+#define  pc_mode    	903
 #define  analog_mode		904
 
 //信号标定部分 

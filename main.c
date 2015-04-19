@@ -97,7 +97,7 @@ void ValveSysInit()
 	//串口1配置
 	uart1_init(115200);
 
-	u3_init();
+	u3_init(); //9600
 
 	//SPI-FLASH初始化，驱动W25X16
 	SPI_FLASH_Init();
@@ -166,39 +166,7 @@ int main(void)
 
   	while(1){
 	
-
-		//左边两个主按键的状态变化
-		/*
-		if( Main_State_Change == 1)
-		{
-			if(GPIO_ReadInputDataBit(GPIOD,GPIO_Pin_9) == 0 && GPIO_ReadInputDataBit(GPIOD,GPIO_Pin_8) == 1)   //就地模式
-				Main_KEY_State = 1;
-			else if(GPIO_ReadInputDataBit(GPIOD,GPIO_Pin_9) == 1 && GPIO_ReadInputDataBit(GPIOD,GPIO_Pin_8) == 0)   //进入远程  
-				Main_KEY_State = 2;
-			else 
-				Main_KEY_State = 0;
-
-			if(Main_KEY_State == 0)
-			{
-				page_mode();				
-				SSRSTOP();
-			}
-			if( Main_KEY_State == 1 )
-			{
-				local_mode();
-				FaultShow(FaultTotal);
-				SSRSTOP();
-			}
-			if( Main_KEY_State == 2)
-			{
-				faraway_mode();	 
-				FaultShow(FaultTotal);
-				SSRSTOP();		  
-			}
-					
-			Main_State_Change = 0;
-		}  
-		*/
+		//Serial3PutChar(0x33);  //test u3 
 		
 		//按键触发事件
 		if(KEY_Flag == 1)	 
@@ -244,6 +212,7 @@ int main(void)
 			/* LED1 取反 */      
 			GPIO_WriteBit(GPIOC, GPIO_Pin_8, 
 					(BitAction)((1-GPIO_ReadOutputDataBit(GPIOC, GPIO_Pin_8))));
+			Serial3PutChar(0x33);
 				 
 		} 
 

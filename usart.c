@@ -1,7 +1,8 @@
 #include "stm32f10x.h"
 #include "usart.h"	
 #include "stm32f10x_usart.h" 
-#include "misc.h"  
+#include "misc.h" 
+
 
 
  
@@ -168,7 +169,7 @@ void USART2_IRQHandler(void)                	//串口1中断服务程序
 void u3_init()
 {
 	USART_InitTypeDef USART_InitStructure;
-  
+  	NVIC_InitTypeDef NVIC_InitStructure;
 	GPIO_InitTypeDef  GPIO_InitStructure;
 
    /* Enable/Disable USART and GPIO clock                                            */
@@ -192,37 +193,105 @@ void u3_init()
 	USART_InitStructure.USART_Parity              =  USART_Parity_No ;//USART_Parity_Odd	
 	USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
 	USART_InitStructure.USART_Mode                = USART_Mode_Rx | USART_Mode_Tx;
-
-
 	//	if you want to set the parity bit ,you must select 9bit data
-	
-	/* Configure the USART1 */
 
 	USART_Init(USART3, &USART_InitStructure);
-	//USART_ITConfig(USART1, USART_IT_TXE, ENABLE);
-	
-	/* Enable the USART Receive interrupt: this interrupt is generated when the 
-	USART1 receive data register is not empty */
 
-	//USART_ITConfig(USART3, USART_IT_RXNE, ENABLE)
-	
+	/* Enable the USART3 Interrupt */
+	NVIC_InitStructure.NVIC_IRQChannel = USART3_IRQn;//USART3_IRQChannel;
+	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
+	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+	NVIC_Init(&NVIC_InitStructure);
 
+	USART_ITConfig(USART3, USART_IT_RXNE, ENABLE);	
 	USART_Cmd(USART3, ENABLE);
-
 }
+
+
 void Serial3PutChar(u8 c)
 {
   USART_SendData(USART3, c);
   while (USART_GetFlagStatus(USART3, USART_FLAG_TXE) == RESET);
 } 
 
-void Serial3_PutString(u8 *s)
+void Serial3PutString(u8 *s)
 {
   while (*s != '\0')
   {
     Serial3PutChar(*s);
     s ++;
   }
+}
+
+//串口3接收中断
+void USART3_IRQHandler(void)
+{
+	char Res;
+	static int U3DataState = 0; //状态机
+	static char temp_8_high = 0 , temp_8_low = 0;
+	int temp_16 = 0;
+	if(USART_GetITStatus(USART3, USART_IT_RXNE) != RESET)
+	{
+		//if(Serial3GetChar()==0x01)
+		//	Serial3PutString("\r\nUSART3 receive is successfull!\r\n");
+		Res =USART_ReceiveData(USART3);//(USART1->DR);	//读取接收到的数据
+		if(  U3DataState == 0 ){
+			if (Res == 0x99) 		//地址码  改为#define 更好 
+				U3DataState = 1;
+			else 
+				U3DataState = 0; //复位
+		}else if(U3DataState == 1){
+			if (Res == 0x01) 	//读取状态
+			{
+				//U3DataState =2;
+				//返回当前的状态
+				//阀位、报警信息
+				Serial3PutString("\r\n return state now!\r\n");
+				U3DataState = 0; //复位
+			}
+			else if(Res == 0x09)	//设定值
+			{
+				U3DataState = 2;				
+			}
+			else
+				U3DataState = 0;	//复位  
+		}else if(U3DataState == 2){			
+			if(Res == 0x00) 		//全开或全关
+			{
+				U3DataState = 3;
+			}
+			else if(Res == 0x01) 	//设定一个阀位值
+				U3DataState = 4;				
+		}else if(U3DataState == 3)
+		{
+			if(Res == 0xff)	 {
+				Serial3PutString("\r\n Open!\r\n");//全开
+				U3DataState = 0; //复位
+			}
+			else if(Res == 0x00){
+				Serial3PutString("\r\n Close!\r\n");;//全关 
+				U3DataState = 0; //复位			
+			}
+			else
+				U3DataState = 0;	
+		}else if(U3DataState == 4)
+		{
+			//设定一个阀位值  读取两个char保存为int			
+			temp_8_high = Res;
+			U3DataState = 5;
+		}else if(U3DataState == 5)
+		{
+			temp_8_low = Res;
+			temp_16 = temp_8_high<<8;
+			temp_16 +=temp_8_low;
+			Serial3PutString("\r\n set a valve value! \r\n");
+			temp_8_high = 0;
+			temp_8_low = 0;
+			U3DataState = 0;	
+		}
+
+		USART_ClearITPendingBit(USART3, USART_IT_RXNE);
+	}
 }
 
 int fputc(int ch, FILE *f)

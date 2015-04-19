@@ -239,12 +239,12 @@ void faraway_mode(void)
 		ch_label[1].code[1] = 87;
 		ch_label[1].code[2] = 6; 
 	} 
-	if( ParaArray[FarawayMode] == double_mode )
+	if( ParaArray[FarawayMode] == pc_mode )
 	{
 		//˫λʽ
-		ch_label[1].code[0] = 91;
-		ch_label[1].code[1] = 127;
-		ch_label[1].code[2] = 6; 
+		ch_label[1].code[0] = 169;
+		ch_label[1].code[1] = 170;
+		ch_label[1].code[2] = 171; 
 	} 
 	if( ParaArray[FarawayMode] == analog_mode )
 	{
