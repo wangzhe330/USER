@@ -2,6 +2,7 @@
 #include "usart.h"	
 #include "stm32f10x_usart.h" 
 #include "misc.h" 
+#include "para.h"
 
 
 
@@ -258,18 +259,31 @@ void USART3_IRQHandler(void)
 		}else if(U3DataState == 2){			
 			if(Res == 0x00) 		//全开或全关
 			{
+				PCMode = pc_mode_set;
 				U3DataState = 3;
 			}
-			else if(Res == 0x01) 	//设定一个阀位值
-				U3DataState = 4;				
+			else if(Res == 0x01){ 	//设定一个阀位值
+				PCMode = pc_mode_set;
+				U3DataState = 4;
+			}
+			else if(Res == 0x02){	//维持式
+				PCMode = pc_mode_hold;
+				U3DataState = 6;
+			}			
+			else if(Res == 0x03){	//脉冲式
+				PCMode = pc_mode_pluse;			
+				U3DataState = 7;			
+			}	
 		}else if(U3DataState == 3)
 		{
 			if(Res == 0xff)	 {
 				Serial3PutString("\r\n Open!\r\n");//全开
+				PCSetValve = 1000;
 				U3DataState = 0; //复位
 			}
 			else if(Res == 0x00){
 				Serial3PutString("\r\n Close!\r\n");;//全关 
+				PCSetValve = 0;
 				U3DataState = 0; //复位			
 			}
 			else
@@ -287,6 +301,36 @@ void USART3_IRQHandler(void)
 			Serial3PutString("\r\n set a valve value! \r\n");
 			temp_8_high = 0;
 			temp_8_low = 0;
+			PCSetValve = temp_16;
+			temp_16 = 0;
+			U3DataState = 0;	
+		}else if(U3DataState == 6)	//维持式
+		{
+		   	if(Res == 0x01){
+				PCHoldOpenSig = 1;
+				Serial3PutString("\r\n PCHoldOpenSig \r\n");
+			}
+			if(Res == 0x02){
+				PCHoldCloseSig = 1;
+			   	Serial3PutString("\r\n PCHoldCloseSig \r\n");
+			}
+				
+			U3DataState = 0;	
+		}else if(U3DataState == 7)	//脉冲式
+		{
+		   	if(Res == 0x01){
+				PCPluseOpenSig = 1;
+				Serial3PutString("\r\n PCPluseOpenSig \r\n");
+			}
+			if(Res == 0x02){
+				PCPluseCloseSig = 1;
+			   	Serial3PutString("\r\n PCPluseCloseSig \r\n");
+			}
+			if(Res == 0x03){
+				PCPluseStopSig = 1;
+			   	Serial3PutString("\r\n PCPluseStopSig \r\n");
+			}
+					
 			U3DataState = 0;	
 		}
 

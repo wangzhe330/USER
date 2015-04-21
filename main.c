@@ -291,20 +291,16 @@ int main(void)
 			//远程模式去读取设定值，每20ms*20=400ms一次
 			if(Main_KEY_State == 2)
 			{
-				if( ParaArray[FarawayMode] == analog_mode)
+				if( ParaArray[FarawayMode] == analog_mode )
 				{	
-					//ValveSetValTemp[ValveSetValTempCnt] = current_to_valve();
+				
 					ValveSetValTempCnt ++;
 					if(ValveSetValTempCnt == 10)
 					{ //wz 2015-3-23 20 //25
 						AD654ToCurrent();
 						ValveSetShow();	//设定值显示				
 						ValveSetValTempCnt = 0;
-						//wz
-						//printf("%d \n        ",ValvePosValue);
-						//判断是否动作的代码段
-						//if(GPIO_ReadInputDataBit(GPIOD,GPIO_Pin_10) == KEY_ON){
-	//wz11
+
 						if( IO2State() == LINK )
 						{
 							if(ValveSetVal > 0  ){  //&& ValveSetVal != 1000
@@ -349,6 +345,47 @@ int main(void)
 						}
 		 	
 						//}
+					}
+				}
+				//wz 注意这里的    && FarawaySM == 0   将震荡 从三次降到了两次
+				if(ParaArray[FarawayMode] == pc_mode && PCMode == pc_mode_set && FarawaySM == 0)
+				{
+					if(PCSetValve >= 10 && PCSetValve <=995)
+						ValveSetVal = PCSetValve;
+					else if(PCSetValve < 10)	
+						ValveSetVal = 0;
+					else if(PCSetValve > 995)
+						ValveSetVal = 1000;
+					if( IO2State() == LINK )
+					{
+						if(ValveSetVal > 0  ){  //&& ValveSetVal != 1000
+							if(ValvePosValue < ValveSetVal - 10)
+							{	
+								
+								ValveSetExecuteFlag = 1;
+								FarawaySM = 1;		//状态机=1  表示开始运行
+								ValveSetExecute_ValveRec = ValvePosValue;	//记录阀位开始动作的初始阀位是多少，用来比较是否停止运动
+								OpenValve();
+							}
+							else if(ValvePosValue > ValveSetVal + 10)
+							{							
+								ValveSetExecuteFlag = 1;
+								FarawaySM = 1;		//状态机=1  表示开始运行
+								ValveSetExecute_ValveRec = ValvePosValue;
+								CloseValve();	
+							}
+						}	 
+						else if(ValveSetVal <= 0)
+						{
+							//全关情况要单独判断是否完全关闭
+							//wz4-17
+							if(ValvePosValue > 0 ){
+								ValveSetExecuteFlag = 1;
+								FarawaySM = 1;		//状态机=1  表示开始运行
+								ValveSetExecute_ValveRec = ValvePosValue;
+								CloseValve();				
+							}					
+						}					
 					}
 				}
 			}
@@ -425,7 +462,7 @@ int main(void)
 
 		if(Main_KEY_State == 2  )
 		{
-			if(ParaArray[FarawayMode] == analog_mode)
+			if(ParaArray[FarawayMode] == analog_mode  || (ParaArray[FarawayMode] == pc_mode && PCMode == pc_mode_set ))
 			{		
 				if( FarawaySM == 1 )
 				{
@@ -513,7 +550,7 @@ int main(void)
 					if( IO0State() == LINK && IO1State() == NOLINK)
 					{
 						Delay_us(500);
-						if( IO0State() == LINK && IO1State() == NOLINK)
+						if( IO0State() == LINK && IO1State() == NOLINK)	
 						{
 							if( ValvePosValue > 0)
 								CloseValve();	

@@ -165,128 +165,29 @@ extern int ssr1_750msflag ;
 extern int ValveOpenLedFlag ;
 extern int ValveCloseLedFlag ;
 
+#define pc_mode_all   600
+#define pc_mode_pluse 601
+#define pc_mode_hold  602
+#define pc_mode_set   603
+
+
+extern int PCMode;
+extern int PCHoldOpenSig ;	//维持式：开信号
+extern int PCHoldCloseSig ;	//维持式：关信号
+extern int PCPluseOpenSig ;	//脉冲式：开信号
+extern int PCPluseCloseSig ;//脉冲式：关信号
+extern int PCPluseStopSig ;//脉冲式：停信号
+extern int PCAllOpenSig ;	//全开信号
+extern int PCAllCLoseSig ;	//全关信号
+extern int PCSetSig ;		//设定 模式
+extern int PCSetValve ; 	//设定值
+
 
 void ParaInit(void);
 void ParaWriteToFlash(void);
 int BufferCmp(int* pBuffer1, int* pBuffer2, int BufferLength);
 
-/*
 
-//基本参数*********************************************************
-//开向限位 关向限位
-typedef enum DirLimit_def{
-	journey,	//行程
-	torque		//转矩
-}DirLimit;
-
-//紧急控制方式、设定信号丢失
-typedef enum Danger_def{
-	hold,  		//保位
-	assign,		//指定位置
-}Danger;
-
-//远程控制模式：脉冲式、维持式、双位式、模拟量
-typedef enum ControlMode_def{
-	pluse_mode,
-	hold_mode,
-	double_mode,
-	analog_mode
-}ControlMode;
-
-extern int ValvePosValue ;		//三位数，最后一位是小数位
-extern int ValvePosValueLast; 
-extern int MidPosition1 ;		//中间位置1
-extern int MidPosition2 ;		//中间位置2
-extern int OpenDirJour ;		//开向设置转矩
-extern int CloseDirJour ;		//关向设置转矩
-*/
-
-//控制参数部分****************************************************
-//就地控制模式：脉冲式、维持式
-/*
-enum LocallyControlMode{
-	pluse_mode,
-	hold_mode,
-}LocallyMode;	*/
-
-						 /*
-//I\O设定部分*****************************************************
-//六个输出的常开常闭状态
-typedef enum Normal_def{
-	close,
-	open
-}Normal;
-
-extern int Feedback8ma ;	//反馈值8ma		
-extern int Feedback16ma ;	//反馈值16ma
-extern int Set8ma ;			//设定值8ma
-extern int Set16ma ;		//设定值16ma
-
-extern int SetValveMin ;	//阀位0%
-extern int SetValveMax ;	//阀位100%
-
-//开关信号输出表示的12种状态
-typedef enum FaultType_def{
-	TotalFault, 		//总故障
-	FarawayFault,		//远方故障
-	LackPhaseFault,		//电源缺相
-	ValveLocationFault,	//阀位故障
-	MotorOverHeartFault,//电机过热故障
-	MidPosition1Fault,		//中间位置1
-	MidPosition2Fault,		//中间位置2
-	OpenDirJourneyLimit,//开向行程限位
-	CloseDirJourneyLimit,//关向行程限位
-	OpenDirTorqueLimit,	//开向行程限位
-	CloseDirTorqueLimit,//关向行程限位
-	SetValueFault,		//设定值故障
-	NoDefined			//未定义
-}FaultType;
-
-//故障计数器
-extern int	TotalFaultCount; 		//总故障
-extern int	FarawayFaultCout;		//远方故障
-extern int	LackPhaseFaultCount;		//电源缺相
-extern int	ValveLocationFaultCount;	//阀位故障
-extern int	MotorOverHeartFaultCount;//电机过热故障
-extern int	MidPosition1FaultCount;		//中间位置1
-extern int	MidPosition2FaultCount;		//中间位置2
-extern int	OpenDirJourneyLimitCount;//开向行程限位
-extern int	CloseDirJourneyLimitCount;//关向行程限位
-extern int	OpenDirTorqueLimitCount;	//开向行程限位
-extern int	CloseDirTorqueLimitCount;//关向行程限位
-extern int	SetValueFaultCount;		//设定值故障
-
-extern int	OpenDirJourneyLimitFaultCount ;//开向行程限位
-extern int	CloseDirJourneyLimitFaultCount ;//关向行程限位
-extern int	OpenDirTorqueLimitFaultCount ;	//开向行程限位
-extern int	CloseDirTorqueLimitFaultCount ;	//关向行程限位
-
-extern int JourneyADCalue;				//转矩AD值
-extern int FactoryCode ;				//出厂编码
-extern int HardwareVersion;			//硬件版本
-extern int SoftwareVersion ;			//软件版本
-
-//其他设置部分****************************************************
-//是否恢复出厂设置、是否清除报警
-typedef enum YorN_def{
-	yes,
-	no
-}YorN;
-
-extern DirLimit OpenDirLimit,CloseDirLimit;
-extern Danger EmergencyMode,SetSigLose;
-extern ControlMode FarawayMode,LocallyMode;
-extern Normal OutNormalState[6];
-extern FaultType OutExpState[6];
-extern YorN Restore,ClearAlarm;
-
-//void IntTo4Char(int x,unsigned char* y);
-int ParaToBuffer(uint8_t* pBuffer,uint16_t BufferLength);
-//从缓冲区读取一批参数
-int ReadParaFromBuffer( uint8_t* pBuffer);
-
-void WriteParaToFlash(void);
-void ReadParaFromFlash(void);	 */
 
 
 #endif

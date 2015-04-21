@@ -33,6 +33,17 @@ int ssr1_750msflag = 0;
 int ValveOpenLedFlag = 0;
 int ValveCloseLedFlag = 0;
 
+int PCMode = 0;		
+int PCHoldOpenSig = 0;	//维持式：开信号
+int PCHoldCloseSig = 0;	//维持式：关信号
+int PCPluseOpenSig = 0;	//脉冲式：开信号
+int PCPluseCloseSig = 0;//脉冲式：关信号
+int PCPluseStopSig = 0 ;//脉冲式：停信号
+int PCAllOpenSig = 0;	//全开信号
+int PCAllCLoseSig = 0;	//全关信号
+int PCSetSig = 0;		//设定 模式
+int PCSetValve = 0; 	//设定值
+
 //参数初始化，应该是去flash读取所有参数	  
 void ParaInit(void)
 {
