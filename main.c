@@ -349,7 +349,7 @@ int main(void)
 				}
 				//wz 注意这里的    && FarawaySM == 0   将震荡 从三次降到了两次
 				if(ParaArray[FarawayMode] == pc_mode && PCMode == pc_mode_set && FarawaySM == 0)
-				{
+				{					
 					if(PCSetValve >= 10 && PCSetValve <=995)
 						ValveSetVal = PCSetValve;
 					else if(PCSetValve < 10)	
@@ -436,6 +436,7 @@ int main(void)
 
 			if(Main_KEY_State == 0)
 			{
+				PageNum = 6;
 				page_mode();
 				FaultShowFlag = 0;				
 				SSRSTOP();

@@ -3,16 +3,12 @@
 #include "stm32f10x_usart.h" 
 #include "misc.h" 
 #include "para.h"
-
-
-
+#include "fault.h"
  
 unsigned char UartData[20];
 unsigned char UartDataLen = 0;
 unsigned char UartDataRec = 0;
-unsigned char UartDataState = 0;
-
- 
+unsigned char UartDataState = 0; 
 
 //初始化IO 串口1 
 //bound:波特率
@@ -90,8 +86,6 @@ void USART1_IRQHandler(void)                	//串口1中断服务程序
      } 
 
 }
-
-
 
 void USART2_Config(void)
 {
@@ -230,6 +224,7 @@ void USART3_IRQHandler(void)
 	char Res;
 	static int U3DataState = 0; //状态机
 	static char temp_8_high = 0 , temp_8_low = 0;
+	char high_8 = 0 , low_8 = 0 ;
 	int temp_16 = 0;
 	if(USART_GetITStatus(USART3, USART_IT_RXNE) != RESET)
 	{
@@ -247,7 +242,18 @@ void USART3_IRQHandler(void)
 				//U3DataState =2;
 				//返回当前的状态
 				//阀位、报警信息
-				Serial3PutString("\r\n return state now!\r\n");
+				//Serial3PutString("\r\n return state now!\r\n");
+				Serial3PutChar(0x99);
+				Serial3PutChar(0x01);
+				high_8 = ValvePosValue >> 8;
+				low_8 = ValvePosValue;
+				Serial3PutChar(high_8);
+				Serial3PutChar(low_8);
+				high_8 = FaultTotal >> 8;
+				low_8 = FaultTotal;
+				Serial3PutChar(high_8);
+				Serial3PutChar(low_8);
+
 				U3DataState = 0; //复位
 			}
 			else if(Res == 0x09)	//设定值

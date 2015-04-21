@@ -556,7 +556,9 @@ void page3area4atom0op1(){	}
 //页面3area4 其他设置       报警清除；不清除
 void page3area4atom1op0(){	}
 //页面3area4 其他设置       报警清除；清除 
-void page3area4atom1op1(){	}
+void page3area4atom1op1(){
+	FaultTotal = 0;
+}
 
 //页面3area5 其他设置       修改密码：不修改 
 void page3area5atom2op0(){}

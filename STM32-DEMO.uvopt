@@ -778,10 +778,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>4</ColumnNumber>
+      <ColumnNumber>47</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>344</TopLine>
-      <CurrentLine>350</CurrentLine>
+      <TopLine>430</TopLine>
+      <CurrentLine>444</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\main.c</PathWithFileName>
       <FilenameWithoutPath>main.c</FilenameWithoutPath>
@@ -834,10 +834,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>15</ColumnNumber>
+      <ColumnNumber>14</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>133</TopLine>
-      <CurrentLine>142</CurrentLine>
+      <TopLine>43</TopLine>
+      <CurrentLine>47</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\fault.c</PathWithFileName>
       <FilenameWithoutPath>fault.c</FilenameWithoutPath>
@@ -1026,7 +1026,7 @@
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>1</TopLine>
-      <CurrentLine>22</CurrentLine>
+      <CurrentLine>14</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\led.c</PathWithFileName>
       <FilenameWithoutPath>led.c</FilenameWithoutPath>
@@ -1037,10 +1037,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>19</ColumnNumber>
+      <ColumnNumber>38</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>271</TopLine>
-      <CurrentLine>286</CurrentLine>
+      <TopLine>144</TopLine>
+      <CurrentLine>144</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\usart.c</PathWithFileName>
       <FilenameWithoutPath>usart.c</FilenameWithoutPath>
@@ -1081,8 +1081,8 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>1</TopLine>
-      <CurrentLine>7</CurrentLine>
+      <TopLine>43</TopLine>
+      <CurrentLine>52</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\current.c</PathWithFileName>
       <FilenameWithoutPath>current.c</FilenameWithoutPath>
@@ -1121,10 +1121,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>25</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>8</TopLine>
-      <CurrentLine>14</CurrentLine>
+      <CurrentLine>29</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\io.c</PathWithFileName>
       <FilenameWithoutPath>io.c</FilenameWithoutPath>
@@ -1172,8 +1172,8 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>416</TopLine>
-      <CurrentLine>429</CurrentLine>
+      <TopLine>547</TopLine>
+      <CurrentLine>558</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\atom.c</PathWithFileName>
       <FilenameWithoutPath>atom.c</FilenameWithoutPath>
@@ -1184,10 +1184,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>42</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>1846</TopLine>
-      <CurrentLine>1856</CurrentLine>
+      <TopLine>2148</TopLine>
+      <CurrentLine>2157</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\area.c</PathWithFileName>
       <FilenameWithoutPath>area.c</FilenameWithoutPath>
@@ -1198,10 +1198,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>59</ColumnNumber>
+      <ColumnNumber>16</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>617</TopLine>
-      <CurrentLine>617</CurrentLine>
+      <TopLine>289</TopLine>
+      <CurrentLine>306</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\page.c</PathWithFileName>
       <FilenameWithoutPath>page.c</FilenameWithoutPath>
@@ -1406,8 +1406,8 @@
 
   <AlienFiles>
     <PathWithFilename>F:\电动执行机构2\CODE\Git\Valve_2_add_modbus_control\USER\atom.h</PathWithFilename>
-    <TopLine>50</TopLine>
-    <CurrentLine>56</CurrentLine>
+    <TopLine>98</TopLine>
+    <CurrentLine>107</CurrentLine>
     <Constant>0</Constant>
     <WindowPosition>
       <length>0</length>
@@ -1539,8 +1539,32 @@
     <ActiveMDIGroup>0</ActiveMDIGroup>
     <MDIGroup>
       <Size>100</Size>
-      <ActiveTab>3</ActiveTab>
+      <ActiveTab>5</ActiveTab>
       <Documents>
+        <Doc>
+          <Name>.\led.c</Name>
+          <ColumnNumber>0</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>14</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>atom.h</Name>
+          <ColumnNumber>0</ColumnNumber>
+          <TopLine>98</TopLine>
+          <CurrentLine>107</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\fault.c</Name>
+          <ColumnNumber>14</ColumnNumber>
+          <TopLine>43</TopLine>
+          <CurrentLine>47</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\current.c</Name>
+          <ColumnNumber>0</ColumnNumber>
+          <TopLine>43</TopLine>
+          <CurrentLine>52</CurrentLine>
+        </Doc>
         <Doc>
           <Name>.\SSR.c</Name>
           <ColumnNumber>5</ColumnNumber>
@@ -1549,9 +1573,9 @@
         </Doc>
         <Doc>
           <Name>.\main.c</Name>
-          <ColumnNumber>4</ColumnNumber>
-          <TopLine>344</TopLine>
-          <CurrentLine>350</CurrentLine>
+          <ColumnNumber>47</ColumnNumber>
+          <TopLine>430</TopLine>
+          <CurrentLine>444</CurrentLine>
         </Doc>
         <Doc>
           <Name>..\FWlib\src\stm32f10x_usart.c</Name>
@@ -1561,9 +1585,9 @@
         </Doc>
         <Doc>
           <Name>.\usart.c</Name>
-          <ColumnNumber>55</ColumnNumber>
-          <TopLine>271</TopLine>
-          <CurrentLine>282</CurrentLine>
+          <ColumnNumber>38</ColumnNumber>
+          <TopLine>144</TopLine>
+          <CurrentLine>144</CurrentLine>
         </Doc>
         <Doc>
           <Name>.\para.c</Name>
@@ -1579,9 +1603,9 @@
         </Doc>
         <Doc>
           <Name>.\page.c</Name>
-          <ColumnNumber>59</ColumnNumber>
-          <TopLine>617</TopLine>
-          <CurrentLine>617</CurrentLine>
+          <ColumnNumber>16</ColumnNumber>
+          <TopLine>289</TopLine>
+          <CurrentLine>306</CurrentLine>
         </Doc>
         <Doc>
           <Name>para.h</Name>
@@ -1603,15 +1627,15 @@
         </Doc>
         <Doc>
           <Name>.\area.c</Name>
-          <ColumnNumber>42</ColumnNumber>
-          <TopLine>1846</TopLine>
-          <CurrentLine>1856</CurrentLine>
+          <ColumnNumber>0</ColumnNumber>
+          <TopLine>2148</TopLine>
+          <CurrentLine>2157</CurrentLine>
         </Doc>
         <Doc>
           <Name>.\atom.c</Name>
           <ColumnNumber>0</ColumnNumber>
-          <TopLine>416</TopLine>
-          <CurrentLine>429</CurrentLine>
+          <TopLine>547</TopLine>
+          <CurrentLine>558</CurrentLine>
         </Doc>
         <Doc>
           <Name>..\CMSIS\startup\startup_stm32f10x_md.s</Name>
@@ -1650,28 +1674,10 @@
           <CurrentLine>163</CurrentLine>
         </Doc>
         <Doc>
-          <Name>.\current.c</Name>
-          <ColumnNumber>0</ColumnNumber>
-          <TopLine>1</TopLine>
-          <CurrentLine>7</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>.\fault.c</Name>
-          <ColumnNumber>15</ColumnNumber>
-          <TopLine>133</TopLine>
-          <CurrentLine>142</CurrentLine>
-        </Doc>
-        <Doc>
           <Name>.\stm32f10x_it.c</Name>
           <ColumnNumber>46</ColumnNumber>
           <TopLine>193</TopLine>
           <CurrentLine>193</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>atom.h</Name>
-          <ColumnNumber>0</ColumnNumber>
-          <TopLine>50</TopLine>
-          <CurrentLine>56</CurrentLine>
         </Doc>
         <Doc>
           <Name>area.h</Name>
@@ -1716,12 +1722,6 @@
           <CurrentLine>2</CurrentLine>
         </Doc>
         <Doc>
-          <Name>.\led.c</Name>
-          <ColumnNumber>0</ColumnNumber>
-          <TopLine>1</TopLine>
-          <CurrentLine>22</CurrentLine>
-        </Doc>
-        <Doc>
           <Name>led.h</Name>
           <ColumnNumber>15</ColumnNumber>
           <TopLine>1</TopLine>
@@ -1741,9 +1741,9 @@
         </Doc>
         <Doc>
           <Name>.\io.c</Name>
-          <ColumnNumber>25</ColumnNumber>
+          <ColumnNumber>0</ColumnNumber>
           <TopLine>8</TopLine>
-          <CurrentLine>14</CurrentLine>
+          <CurrentLine>29</CurrentLine>
         </Doc>
       </Documents>
     </MDIGroup>
