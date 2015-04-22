@@ -330,7 +330,7 @@ int main(void)
 									ValveSetExecute_ValveRec = ValvePosValue;
 									CloseValve();				
 								}					
-							} 	 /*
+							} 	 
 							else if(ValveSetVal >= 1000)
 							{
 								//全开情况要单独判断是否完全打开
@@ -341,7 +341,7 @@ int main(void)
 									ValveSetExecute_ValveRec = ValvePosValue;
 									OpenValve();
 								}								
-							}	*/				 
+							}					 
 						}
 		 	
 						//}
@@ -489,7 +489,7 @@ int main(void)
 								}
 							}
 							else if( ValveSetVal == 1000 ){
-								if( ValvePosValue > ValveSetVal - ValveOpenError - 5 )
+								if( ValvePosValue > ValveSetVal - ValveOpenError  )
 								{
 									//if( ValvePosValue > ValveSetVal - 10 )
 									{

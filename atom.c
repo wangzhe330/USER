@@ -42,14 +42,14 @@ float AD654ToCurrent(void){
 	//re = ( (float)AD654F - 200.0 )/50.0 + 4.0;
 	//re = ( (float)ad654rec[0] - 80.0 )/20.0 + 4.0;
 	//ValveSetVal	= ((float)AD654F - 200.0 )*1.25 ;
-	/*
+
 	if( (ad654rec[0]-ad654rec[1]>5 && ad654rec[1]-ad654rec[2]>5) || (ad654rec[1]-ad654rec[0]>5 && ad654rec[2]-ad654rec[1]>5) )
 		sum = ad654rec[0];
 	else 
 		sum = (ad654rec[0] + ad654rec[1] + ad654rec[2] + ad654rec[3])/4;
-	  */
+	  
 	//sum = (ad654rec[0] + ad654rec[1] + ad654rec[2] + ad654rec[3])/4;
-	sum = ad654rec[0];
+	//sum = ad654rec[0];		//wz 重大修改  将采样由四次降低为1次
 		/*
 	for(cnt = 0 ; cnt < 4 ; cnt ++){
 		sum = sum + ad654rec[cnt]/4 ;

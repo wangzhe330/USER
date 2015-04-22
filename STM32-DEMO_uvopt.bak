@@ -778,10 +778,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>9</ColumnNumber>
+      <ColumnNumber>49</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>319</TopLine>
-      <CurrentLine>333</CurrentLine>
+      <CurrentLine>341</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\main.c</PathWithFileName>
       <FilenameWithoutPath>main.c</FilenameWithoutPath>
@@ -1079,10 +1079,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>19</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>43</TopLine>
-      <CurrentLine>52</CurrentLine>
+      <TopLine>1</TopLine>
+      <CurrentLine>8</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\current.c</PathWithFileName>
       <FilenameWithoutPath>current.c</FilenameWithoutPath>
@@ -1170,10 +1170,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>3</ColumnNumber>
+      <ColumnNumber>49</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>37</TopLine>
-      <CurrentLine>51</CurrentLine>
+      <CurrentLine>53</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\atom.c</PathWithFileName>
       <FilenameWithoutPath>atom.c</FilenameWithoutPath>
@@ -1539,13 +1539,13 @@
     <ActiveMDIGroup>0</ActiveMDIGroup>
     <MDIGroup>
       <Size>100</Size>
-      <ActiveTab>5</ActiveTab>
+      <ActiveTab>7</ActiveTab>
       <Documents>
         <Doc>
           <Name>.\atom.c</Name>
-          <ColumnNumber>3</ColumnNumber>
+          <ColumnNumber>49</ColumnNumber>
           <TopLine>37</TopLine>
-          <CurrentLine>57</CurrentLine>
+          <CurrentLine>53</CurrentLine>
         </Doc>
         <Doc>
           <Name>.\area.c</Name>
@@ -1585,9 +1585,9 @@
         </Doc>
         <Doc>
           <Name>.\main.c</Name>
-          <ColumnNumber>9</ColumnNumber>
+          <ColumnNumber>34</ColumnNumber>
           <TopLine>319</TopLine>
-          <CurrentLine>333</CurrentLine>
+          <CurrentLine>334</CurrentLine>
         </Doc>
         <Doc>
           <Name>..\FWlib\src\stm32f10x_usart.c</Name>
