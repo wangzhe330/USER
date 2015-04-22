@@ -182,6 +182,4 @@ void FaultDetect(void)
 		RelayOut3(OPEN);
 
 	}
-
-
 }

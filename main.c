@@ -291,19 +291,23 @@ int main(void)
 			//远程模式去读取设定值，每20ms*20=400ms一次
 			if(Main_KEY_State == 2)
 			{
-				if( ParaArray[FarawayMode] == analog_mode )
+				
+				if( ParaArray[FarawayMode] == analog_mode  )
 				{	
 				
 					ValveSetValTempCnt ++;
 					if(ValveSetValTempCnt == 10)
 					{ //wz 2015-3-23 20 //25
+						
 						AD654ToCurrent();
-						ValveSetShow();	//设定值显示				
+						ValveSetShow();	//设定值显示											
+					
 						ValveSetValTempCnt = 0;
-
-						if( IO2State() == LINK )
+	
+						//wz 4-22 加入 FaultTotal == 0 会不会对别的造成影响？
+						if( IO2State() == LINK && FaultTotal == 0)
 						{
-							if(ValveSetVal > 0  ){  //&& ValveSetVal != 1000
+							if(ValveSetVal > 0 && ValveSetVal < 1000 ){  //&& ValveSetVal != 1000
 								if(ValvePosValue < ValveSetVal - 10)
 								{	
 									
@@ -357,8 +361,50 @@ int main(void)
 					else if(PCSetValve > 995)
 						ValveSetVal = 1000;
 					if( IO2State() == LINK )
-					{
-						if(ValveSetVal > 0  ){  //&& ValveSetVal != 1000
+					{	
+						if( IO2State() == LINK && FaultTotal == 0)
+						{
+							if(ValveSetVal > 0 && ValveSetVal < 1000 ){  //&& ValveSetVal != 1000
+								if(ValvePosValue < ValveSetVal - 10)
+								{	
+									
+									ValveSetExecuteFlag = 1;
+									FarawaySM = 1;		//状态机=1  表示开始运行
+									ValveSetExecute_ValveRec = ValvePosValue;	//记录阀位开始动作的初始阀位是多少，用来比较是否停止运动
+									OpenValve();
+								}
+								else if(ValvePosValue > ValveSetVal + 10)
+								{							
+									ValveSetExecuteFlag = 1;
+									FarawaySM = 1;		//状态机=1  表示开始运行
+									ValveSetExecute_ValveRec = ValvePosValue;
+									CloseValve();	
+								}
+							}	 
+							else if(ValveSetVal <= 0)
+							{
+								//全关情况要单独判断是否完全关闭
+								//wz4-17
+								if(ValvePosValue > 0 ){
+									ValveSetExecuteFlag = 1;
+									FarawaySM = 1;		//状态机=1  表示开始运行
+									ValveSetExecute_ValveRec = ValvePosValue;
+									CloseValve();				
+								}					
+							} 	 
+							else if(ValveSetVal >= 1000)
+							{
+								//全开情况要单独判断是否完全打开
+								//wz4-17
+								if(ValvePosValue < 1000 ){
+									ValveSetExecuteFlag = 1;
+									FarawaySM = 1;		//状态机=1  表示开始运行
+									ValveSetExecute_ValveRec = ValvePosValue;
+									OpenValve();
+								}								
+							}					 
+						}
+						/*if(ValveSetVal > 0  ){  //&& ValveSetVal != 1000
 							if(ValvePosValue < ValveSetVal - 10)
 							{	
 								
@@ -385,7 +431,7 @@ int main(void)
 								ValveSetExecute_ValveRec = ValvePosValue;
 								CloseValve();				
 							}					
-						}					
+						}*/					
 					}
 				}
 			}
@@ -478,7 +524,7 @@ int main(void)
 						//if(( ValvePosValue < ValveSetVal && ValvePosValue > ValveSetVal - 17 ) || ( ValvePosValue>ValveSetVal && ValvePosValue <ValveSetVal + 19 )	)
 						//if(( ValvePosValue < ValveSetVal && ValvePosValue > ValveSetVal - (int)(17.0*( 1000.0/((float)ParaArray[SetValveMax]-(float)ParaArray[SetValveMin])) ) ) || ( ValvePosValue>ValveSetVal && ValvePosValue <ValveSetVal + (int)(38.0*( 1000.0/((float)ParaArray[SetValveMax]-(float)ParaArray[SetValveMin]) ) ) )	)					
 	
-						if( ValveSetExecute_ValveRec < ValveSetVal - 10)  //这里是开阀门操作
+						if( ValveOpenLedFlag == 1 )//( ValveSetExecute_ValveRec < ValveSetVal - 10)  //这里是开阀门操作
 						{
 							if(ValveSetVal < 1000){	
 								if( ValvePosValue > ValveSetVal - ValveOpenError )
@@ -489,7 +535,7 @@ int main(void)
 								}
 							}
 							else if( ValveSetVal == 1000 ){
-								if( ValvePosValue > ValveSetVal - ValveOpenError  )
+								if( ValvePosValue >= 998 )//if( ValvePosValue > ValveSetVal - ValveOpenError  )
 								{
 									//if( ValvePosValue > ValveSetVal - 10 )
 									{
@@ -500,6 +546,7 @@ int main(void)
 								}	
 							}
 						}
+						
 						if(ValveSetVal != 0){
 							if(ValveSetExecute_ValveRec > ValveSetVal + 10)		//现在执行的是关阀门操作
 							{
@@ -535,10 +582,16 @@ int main(void)
 								}
 							}								
 						}
+						/*
+						if(ValveSetVal == 1000)
+						{
+							if(ValvePosValue == 1000 )
+								SSRSTOP();	
+						} */
 					}
 				}
 			}
-			if(ParaArray[FarawayMode] == pluse_mode)
+			if(ParaArray[FarawayMode] == pluse_mode )
 			{
 				if( IO2State() == NOLINK )
 				{
@@ -548,7 +601,7 @@ int main(void)
 				}
 				else if(IO2State() == LINK)
 				{
-					if( IO0State() == LINK && IO1State() == NOLINK)
+					if( IO0State() == LINK && IO1State() == NOLINK  )
 					{
 						Delay_us(500);
 						if( IO0State() == LINK && IO1State() == NOLINK)	
@@ -616,6 +669,44 @@ int main(void)
 							SSRSTOP();
 				}				
 			}
+			if(ParaArray[FarawayMode] == pc_mode && PCMode == pc_mode_pluse )
+			{
+				if( IO2State() == NOLINK )
+				{
+						SSRSTOP();
+						STOP_FLAG = 1;
+						FarawaySM = 2;		//状态机=2  表示电机停转					
+				}
+				else if(IO2State() == LINK)
+				{
+					if( PCPluseCloseSig == 1 )
+					{
+						if( ValvePosValue > 0)
+							CloseValve();
+						PCPluseCloseSig	 = 0;
+					}
+					if( PCPluseOpenSig == 1 )
+					{
+						if(ValvePosValue < 1000)
+							OpenValve();
+						PCPluseOpenSig = 0;								
+					}
+					if( PCPluseStopSig == 1)
+					{
+						SSRSTOP();
+						PCPluseStopSig = 0;	
+					}
+				}
+				if( ValveSetVal == 1000 )
+				{
+					if( ValvePosValue>1000 - ValveOpenError - 8 &&  ValvePosValue>ValvePosValueLast)
+						SSRSTOP();	
+				}
+				if( ValvePosValue>1000 - ValveOpenError &&  ValvePosValue>ValvePosValueLast)
+						SSRSTOP();	
+				if( ValvePosValue < 0-ValveCloseError && ValvePosValue<ValvePosValueLast )
+						SSRSTOP();				
+			}
 		}
 
 		
@@ -668,7 +759,7 @@ int main(void)
 				RelayOut4(OPEN);
 				RelayOut5(OPEN);	
 			}
-			if(ValvePosValue >= 1000 && ValvePosValue < 1020)
+			if(ValvePosValue >= 1000 )//&& ValvePosValue < 1020)
 			{
 				LED3(OFF);
 				LED1(ON);

@@ -35,6 +35,8 @@ void SSRPowerOn(void)
 void SSRPowerOff(void)
 {
 	GPIO_SetBits(GPIOC,GPIO_Pin_2);	
+	ValveOpenLedFlag = 0;
+	ValveCloseLedFlag = 0;
 }
 
 void OpenValve(void)
@@ -59,8 +61,6 @@ void CloseValve(void)
 
 void SSR0RUN()
 {	
-	//ULN2803有反向功能，所以
-	//GPIO_ResetBits(GPIOC, GPIO_Pin_2 );
 	GPIO_ResetBits(GPIOC, GPIO_Pin_0 );
 	//Delay_ms(100);
 	GPIO_SetBits(GPIOC, GPIO_Pin_1);
@@ -84,23 +84,17 @@ void SSRSTOP()
 
 	ValveOpenLedFlag = 0;
 	ValveCloseLedFlag = 0;
+	ValveStopFlag = 0;
 	if(ValvePosValue == 0) 
 	{
 		LED3(ON);
 		LED1(OFF);
 	}
-	/*
-	else if(ValvePosValue < 1000)
-	{
-		LED3(ON);
-		LED1(ON);
-	} */
 	if( ValvePosValue == 1000 )
 	{
 		LED3(OFF);
 		LED1(ON);
-	}
-	
+	}	
 }
 
 //自整定参数

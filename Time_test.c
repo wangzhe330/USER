@@ -3,6 +3,7 @@
 #include "stm32f10x_tim.h"
 #include "usart.h"
 #include "para.h"
+#include "fault.h"
 
 extern int ValveClosePluseFlag,ValveOpenPluseFlag;
 /*
@@ -104,10 +105,13 @@ void TIM3_IRQHandler(void)   //TIM3ÖÐ¶Ï
 			GPIO_WriteBit(GPIOC, GPIO_Pin_9, 
 					(BitAction)((1-GPIO_ReadOutputDataBit(GPIOC, GPIO_Pin_9)))); 
 					count1s = 0;*/
-			if(ValveOpenLedFlag == 1)
-				GPIO_WriteBit(GPIOE, GPIO_Pin_13, (BitAction)((1-GPIO_ReadOutputDataBit(GPIOE, GPIO_Pin_13))));
-			if(ValveCloseLedFlag == 1)
-				GPIO_WriteBit(GPIOE, GPIO_Pin_15, (BitAction)((1-GPIO_ReadOutputDataBit(GPIOE, GPIO_Pin_15))));	
+			if( FaultTotal == 0)
+			{
+				if(ValveOpenLedFlag == 1)
+					GPIO_WriteBit(GPIOE, GPIO_Pin_13, (BitAction)((1-GPIO_ReadOutputDataBit(GPIOE, GPIO_Pin_13))));
+				if(ValveCloseLedFlag == 1)
+					GPIO_WriteBit(GPIOE, GPIO_Pin_15, (BitAction)((1-GPIO_ReadOutputDataBit(GPIOE, GPIO_Pin_15))));	
+			}
 				
 			count1s = 0;
 									 			

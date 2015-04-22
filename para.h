@@ -164,6 +164,7 @@ extern int ssr1_750msflag ;
 
 extern int ValveOpenLedFlag ;
 extern int ValveCloseLedFlag ;
+extern int ValveStopFlag ;
 
 #define pc_mode_all   600
 #define pc_mode_pluse 601

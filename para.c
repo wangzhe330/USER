@@ -32,6 +32,7 @@ int ssr1_750msflag = 0;
 
 int ValveOpenLedFlag = 0;
 int ValveCloseLedFlag = 0;
+int ValveStopFlag = 0;
 
 int PCMode = 0;		
 int PCHoldOpenSig = 0;	//维持式：开信号

@@ -778,10 +778,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>49</ColumnNumber>
+      <ColumnNumber>58</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>319</TopLine>
-      <CurrentLine>341</CurrentLine>
+      <TopLine>347</TopLine>
+      <CurrentLine>369</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\main.c</PathWithFileName>
       <FilenameWithoutPath>main.c</FilenameWithoutPath>
@@ -792,10 +792,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>46</ColumnNumber>
+      <ColumnNumber>35</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>193</TopLine>
-      <CurrentLine>193</CurrentLine>
+      <TopLine>241</TopLine>
+      <CurrentLine>241</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\stm32f10x_it.c</PathWithFileName>
       <FilenameWithoutPath>stm32f10x_it.c</FilenameWithoutPath>
@@ -834,10 +834,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>14</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>43</TopLine>
-      <CurrentLine>47</CurrentLine>
+      <TopLine>168</TopLine>
+      <CurrentLine>177</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\fault.c</PathWithFileName>
       <FilenameWithoutPath>fault.c</FilenameWithoutPath>
@@ -1025,8 +1025,8 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>3</TopLine>
-      <CurrentLine>14</CurrentLine>
+      <TopLine>1</TopLine>
+      <CurrentLine>30</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\led.c</PathWithFileName>
       <FilenameWithoutPath>led.c</FilenameWithoutPath>
@@ -1037,10 +1037,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>38</ColumnNumber>
+      <ColumnNumber>18</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>144</TopLine>
-      <CurrentLine>144</CurrentLine>
+      <TopLine>306</TopLine>
+      <CurrentLine>328</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\usart.c</PathWithFileName>
       <FilenameWithoutPath>usart.c</FilenameWithoutPath>
@@ -1053,8 +1053,8 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>61</TopLine>
-      <CurrentLine>71</CurrentLine>
+      <TopLine>139</TopLine>
+      <CurrentLine>148</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\Time_test.c</PathWithFileName>
       <FilenameWithoutPath>Time_test.c</FilenameWithoutPath>
@@ -1065,10 +1065,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>5</ColumnNumber>
+      <ColumnNumber>15</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>40</TopLine>
-      <CurrentLine>40</CurrentLine>
+      <TopLine>49</TopLine>
+      <CurrentLine>52</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\SSR.c</PathWithFileName>
       <FilenameWithoutPath>SSR.c</FilenameWithoutPath>
@@ -1093,10 +1093,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>45</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>76</TopLine>
-      <CurrentLine>87</CurrentLine>
+      <TopLine>22</TopLine>
+      <CurrentLine>31</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\PWM.C</PathWithFileName>
       <FilenameWithoutPath>PWM.C</FilenameWithoutPath>
@@ -1156,10 +1156,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>11</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>26</TopLine>
-      <CurrentLine>37</CurrentLine>
+      <CurrentLine>33</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\para.c</PathWithFileName>
       <FilenameWithoutPath>para.c</FilenameWithoutPath>
@@ -1170,10 +1170,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>49</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>37</TopLine>
-      <CurrentLine>53</CurrentLine>
+      <TopLine>420</TopLine>
+      <CurrentLine>427</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\atom.c</PathWithFileName>
       <FilenameWithoutPath>atom.c</FilenameWithoutPath>
@@ -1198,10 +1198,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>16</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>295</TopLine>
-      <CurrentLine>306</CurrentLine>
+      <TopLine>235</TopLine>
+      <CurrentLine>242</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\page.c</PathWithFileName>
       <FilenameWithoutPath>page.c</FilenameWithoutPath>
@@ -1212,10 +1212,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>9</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>374</TopLine>
-      <CurrentLine>385</CurrentLine>
+      <TopLine>379</TopLine>
+      <CurrentLine>388</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\KeyResponse.c</PathWithFileName>
       <FilenameWithoutPath>KeyResponse.c</FilenameWithoutPath>
@@ -1251,7 +1251,7 @@
   <AlienFiles>
     <PathWithFilename>F:\电动执行机构2\CODE\Git\Valve_2_add_modbus_control\USER\led.h</PathWithFilename>
     <TopLine>1</TopLine>
-    <CurrentLine>8</CurrentLine>
+    <CurrentLine>13</CurrentLine>
     <Constant>0</Constant>
     <WindowPosition>
       <length>0</length>
@@ -1303,7 +1303,7 @@
   <AlienFiles>
     <PathWithFilename>F:\电动执行机构2\CODE\Git\Valve_2_add_modbus_control\USER\fault.h</PathWithFilename>
     <TopLine>1</TopLine>
-    <CurrentLine>6</CurrentLine>
+    <CurrentLine>10</CurrentLine>
     <Constant>0</Constant>
     <WindowPosition>
       <length>0</length>
@@ -1484,8 +1484,8 @@
 
   <AlienFiles>
     <PathWithFilename>F:\电动执行机构2\CODE\Git\Valve_2_add_modbus_control\USER\para.h</PathWithFilename>
-    <TopLine>172</TopLine>
-    <CurrentLine>183</CurrentLine>
+    <TopLine>162</TopLine>
+    <CurrentLine>169</CurrentLine>
     <Constant>0</Constant>
     <WindowPosition>
       <length>0</length>
@@ -1539,13 +1539,79 @@
     <ActiveMDIGroup>0</ActiveMDIGroup>
     <MDIGroup>
       <Size>100</Size>
-      <ActiveTab>7</ActiveTab>
+      <ActiveTab>4</ActiveTab>
       <Documents>
         <Doc>
+          <Name>.\usart.c</Name>
+          <ColumnNumber>19</ColumnNumber>
+          <TopLine>306</TopLine>
+          <CurrentLine>324</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\page.c</Name>
+          <ColumnNumber>0</ColumnNumber>
+          <TopLine>235</TopLine>
+          <CurrentLine>242</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\KeyResponse.c</Name>
+          <ColumnNumber>0</ColumnNumber>
+          <TopLine>379</TopLine>
+          <CurrentLine>388</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\SSR.c</Name>
+          <ColumnNumber>15</ColumnNumber>
+          <TopLine>49</TopLine>
+          <CurrentLine>52</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\main.c</Name>
+          <ColumnNumber>36</ColumnNumber>
+          <TopLine>245</TopLine>
+          <CurrentLine>245</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\PWM.C</Name>
+          <ColumnNumber>0</ColumnNumber>
+          <TopLine>22</TopLine>
+          <CurrentLine>31</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>fault.h</Name>
+          <ColumnNumber>21</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>10</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\stm32f10x_it.c</Name>
+          <ColumnNumber>35</ColumnNumber>
+          <TopLine>241</TopLine>
+          <CurrentLine>241</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>led.h</Name>
+          <ColumnNumber>12</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>13</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\Time_test.c</Name>
+          <ColumnNumber>0</ColumnNumber>
+          <TopLine>139</TopLine>
+          <CurrentLine>148</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>para.h</Name>
+          <ColumnNumber>0</ColumnNumber>
+          <TopLine>162</TopLine>
+          <CurrentLine>169</CurrentLine>
+        </Doc>
+        <Doc>
           <Name>.\atom.c</Name>
-          <ColumnNumber>49</ColumnNumber>
-          <TopLine>37</TopLine>
-          <CurrentLine>53</CurrentLine>
+          <ColumnNumber>0</ColumnNumber>
+          <TopLine>420</TopLine>
+          <CurrentLine>427</CurrentLine>
         </Doc>
         <Doc>
           <Name>.\area.c</Name>
@@ -1556,8 +1622,8 @@
         <Doc>
           <Name>.\led.c</Name>
           <ColumnNumber>0</ColumnNumber>
-          <TopLine>3</TopLine>
-          <CurrentLine>14</CurrentLine>
+          <TopLine>1</TopLine>
+          <CurrentLine>30</CurrentLine>
         </Doc>
         <Doc>
           <Name>atom.h</Name>
@@ -1567,9 +1633,9 @@
         </Doc>
         <Doc>
           <Name>.\fault.c</Name>
-          <ColumnNumber>14</ColumnNumber>
-          <TopLine>43</TopLine>
-          <CurrentLine>47</CurrentLine>
+          <ColumnNumber>0</ColumnNumber>
+          <TopLine>168</TopLine>
+          <CurrentLine>177</CurrentLine>
         </Doc>
         <Doc>
           <Name>.\current.c</Name>
@@ -1578,52 +1644,16 @@
           <CurrentLine>8</CurrentLine>
         </Doc>
         <Doc>
-          <Name>.\SSR.c</Name>
-          <ColumnNumber>5</ColumnNumber>
-          <TopLine>40</TopLine>
-          <CurrentLine>40</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>.\main.c</Name>
-          <ColumnNumber>34</ColumnNumber>
-          <TopLine>319</TopLine>
-          <CurrentLine>334</CurrentLine>
-        </Doc>
-        <Doc>
           <Name>..\FWlib\src\stm32f10x_usart.c</Name>
           <ColumnNumber>79</ColumnNumber>
           <TopLine>233</TopLine>
           <CurrentLine>244</CurrentLine>
         </Doc>
         <Doc>
-          <Name>.\usart.c</Name>
-          <ColumnNumber>38</ColumnNumber>
-          <TopLine>144</TopLine>
-          <CurrentLine>144</CurrentLine>
-        </Doc>
-        <Doc>
           <Name>.\para.c</Name>
-          <ColumnNumber>0</ColumnNumber>
+          <ColumnNumber>11</ColumnNumber>
           <TopLine>26</TopLine>
-          <CurrentLine>37</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>.\KeyResponse.c</Name>
-          <ColumnNumber>9</ColumnNumber>
-          <TopLine>374</TopLine>
-          <CurrentLine>385</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>.\page.c</Name>
-          <ColumnNumber>16</ColumnNumber>
-          <TopLine>295</TopLine>
-          <CurrentLine>306</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>para.h</Name>
-          <ColumnNumber>21</ColumnNumber>
-          <TopLine>172</TopLine>
-          <CurrentLine>183</CurrentLine>
+          <CurrentLine>33</CurrentLine>
         </Doc>
         <Doc>
           <Name>oled.h</Name>
@@ -1656,28 +1686,10 @@
           <CurrentLine>23</CurrentLine>
         </Doc>
         <Doc>
-          <Name>.\Time_test.c</Name>
-          <ColumnNumber>0</ColumnNumber>
-          <TopLine>61</TopLine>
-          <CurrentLine>71</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>.\PWM.C</Name>
-          <ColumnNumber>45</ColumnNumber>
-          <TopLine>76</TopLine>
-          <CurrentLine>87</CurrentLine>
-        </Doc>
-        <Doc>
           <Name>.\key.c</Name>
           <ColumnNumber>0</ColumnNumber>
           <TopLine>153</TopLine>
           <CurrentLine>163</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>.\stm32f10x_it.c</Name>
-          <ColumnNumber>46</ColumnNumber>
-          <TopLine>193</TopLine>
-          <CurrentLine>193</CurrentLine>
         </Doc>
         <Doc>
           <Name>area.h</Name>
@@ -1710,22 +1722,10 @@
           <CurrentLine>28</CurrentLine>
         </Doc>
         <Doc>
-          <Name>fault.h</Name>
-          <ColumnNumber>20</ColumnNumber>
-          <TopLine>1</TopLine>
-          <CurrentLine>6</CurrentLine>
-        </Doc>
-        <Doc>
           <Name>ssr.h</Name>
           <ColumnNumber>59</ColumnNumber>
           <TopLine>1</TopLine>
           <CurrentLine>2</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>led.h</Name>
-          <ColumnNumber>15</ColumnNumber>
-          <TopLine>1</TopLine>
-          <CurrentLine>8</CurrentLine>
         </Doc>
         <Doc>
           <Name>..\FWlib\src\stm32f10x_gpio.c</Name>
