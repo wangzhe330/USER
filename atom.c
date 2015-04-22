@@ -42,10 +42,14 @@ float AD654ToCurrent(void){
 	//re = ( (float)AD654F - 200.0 )/50.0 + 4.0;
 	//re = ( (float)ad654rec[0] - 80.0 )/20.0 + 4.0;
 	//ValveSetVal	= ((float)AD654F - 200.0 )*1.25 ;
+	/*
 	if( (ad654rec[0]-ad654rec[1]>5 && ad654rec[1]-ad654rec[2]>5) || (ad654rec[1]-ad654rec[0]>5 && ad654rec[2]-ad654rec[1]>5) )
 		sum = ad654rec[0];
 	else 
 		sum = (ad654rec[0] + ad654rec[1] + ad654rec[2] + ad654rec[3])/4;
+	  */
+	//sum = (ad654rec[0] + ad654rec[1] + ad654rec[2] + ad654rec[3])/4;
+	sum = ad654rec[0];
 		/*
 	for(cnt = 0 ; cnt < 4 ; cnt ++){
 		sum = sum + ad654rec[cnt]/4 ;
@@ -53,9 +57,8 @@ float AD654ToCurrent(void){
 	//ValveSetVal	= ((float)sum - ParaArray[Set8ma] )/()*500.0+250.0 ;
 	ValveSetVal	=(int)( ((float)(sum - ParaArray[Set4ma] ))*set_k  );
 	
-	//
 
-	if( ValveSetVal > 1000 && ValveSetVal < 1190 )
+	if( ValveSetVal > 995 && ValveSetVal < 1190 )
 		ValveSetVal = 1000;
 	if( ValveSetVal >= 1190 )
 	{
@@ -105,49 +108,47 @@ float AD654ToCurrent(void){
 }
 void ValveSetShow()
 {
-	//只有当未执行的时候，才可以设置Set这个参数，执行之后，Set这个参数保持，显示也保持
-	//if(ValveSetExecuteFlag == 0)
-	{
-		//ValveSetVal = (int)(sum / 8);	   //平均值	原来是23  这里改成8 wz2015-3-13
+	//ValveSetVal = (int)(sum / 8);	   //平均值	原来是23  这里改成8 wz2015-3-13
 
-		if(ValveSetVal>=0 && ValveSetVal<=1000){	
-			if(ValveSetVal == 1000) {
-			
-				ascii_1608(40,16,english[ValveSetVal/1000+18],0);
-				ascii_1608(44,16,english[ValveSetVal%1000/100+18],0);
-				ascii_1608(48,16,english[ValveSetVal%100/10+18],0);
-				ascii_1608(56,16,english[ValveSetVal%10+18],0);
-				ascii_1608(52,16,english[31],0);
-				ascii_1608(60,16,english[32],0);	
-			}else{
-				ascii_1608(40,16,english[41],0); 
-				ascii_1608(44,16,english[ValveSetVal/100+18],0);
-				ascii_1608(48,16,english[ValveSetVal%100/10+18],0);
-				ascii_1608(56,16,english[ValveSetVal%10+18],0);
-				ascii_1608(52,16,english[31],0);
-				ascii_1608(60,16,english[32],0);				
-			}
+	if(ValveSetVal>=0 && ValveSetVal<=1000){	
+		if(ValveSetVal == 1000) {
+		
+			ascii_1608(40,16,english[ValveSetVal/1000+18],0);
+			ascii_1608(44,16,english[ValveSetVal%1000/100+18],0);
+			ascii_1608(48,16,english[ValveSetVal%100/10+18],0);
+			ascii_1608(56,16,english[ValveSetVal%10+18],0);
+			ascii_1608(52,16,english[31],0);
+			ascii_1608(60,16,english[32],0);	
 		}else{
-			//guzhang  这里应该触发故障模块
-				ascii_1608(40,16,english[41],0);
-			
-			ascii_1608(44,16,english[33],0);
-			ascii_1608(48,16,english[34],0);
-			ascii_1608(52,16,english[35],0);
-			ascii_1608(56,16,english[36],0);
-			ascii_1608(60,16,english[37],0);			
+			ascii_1608(40,16,english[41],0); 
+			ascii_1608(44,16,english[ValveSetVal/100+18],0);
+			ascii_1608(48,16,english[ValveSetVal%100/10+18],0);
+			ascii_1608(56,16,english[ValveSetVal%10+18],0);
+			ascii_1608(52,16,english[31],0);
+			ascii_1608(60,16,english[32],0);				
 		}
+	}else{
+		//guzhang  这里应该触发故障模块
+		ascii_1608(40,16,english[41],0);
+		
+		ascii_1608(44,16,english[33],0);
+		ascii_1608(48,16,english[34],0);
+		ascii_1608(52,16,english[35],0);
+		ascii_1608(56,16,english[36],0);
+		ascii_1608(60,16,english[37],0);			
 	}	
 }
 
 //远程模式下4-20mA阀位设定值滤波、显示
+/*
 void ValveSetShow_old()
 {
 	int i = 0 , j = 0;
 	int temp = 0;
 	int max = 0 , min = 65535;//去掉最大值和最小值
 	long int sum = 0;
-	/*
+
+	//  *
 	for(i = 0 ; i < 10 ;i ++)
 	{
 		if(ValveSetValTemp[i] > max) max = ValveSetValTemp[i];
@@ -158,7 +159,8 @@ void ValveSetShow_old()
 		sum += ValveSetValTemp[i];
 	}
 	sum =sum - max - min; //去掉最大和最小的值
-	*/
+	* //
+
 	for(i = 0 ; i < 25 ; i ++){
 		for(j = 0 ; j < 25 ; j ++){
 			if(ValveSetValTemp[j] < ValveSetValTemp[i]){
@@ -193,7 +195,7 @@ void ValveSetShow_old()
 			ascii_1608(60,16,english[37],0);			
 		}
 	}
-}
+} */
 
 //远程模式下 控制误差显示
 void ValveErrorShow()

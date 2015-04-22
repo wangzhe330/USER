@@ -778,10 +778,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>15</ColumnNumber>
+      <ColumnNumber>9</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>430</TopLine>
-      <CurrentLine>439</CurrentLine>
+      <TopLine>319</TopLine>
+      <CurrentLine>333</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\main.c</PathWithFileName>
       <FilenameWithoutPath>main.c</FilenameWithoutPath>
@@ -913,7 +913,7 @@
       <Focus>0</Focus>
       <ColumnNumber>79</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>231</TopLine>
+      <TopLine>233</TopLine>
       <CurrentLine>244</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\FWlib\src\stm32f10x_usart.c</PathWithFileName>
@@ -1025,7 +1025,7 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>1</TopLine>
+      <TopLine>3</TopLine>
       <CurrentLine>14</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\led.c</PathWithFileName>
@@ -1095,7 +1095,7 @@
       <Focus>0</Focus>
       <ColumnNumber>45</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>74</TopLine>
+      <TopLine>76</TopLine>
       <CurrentLine>87</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\PWM.C</PathWithFileName>
@@ -1123,7 +1123,7 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>8</TopLine>
+      <TopLine>18</TopLine>
       <CurrentLine>29</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\io.c</PathWithFileName>
@@ -1144,7 +1144,7 @@
       <Focus>0</Focus>
       <ColumnNumber>25</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>567</TopLine>
+      <TopLine>569</TopLine>
       <CurrentLine>580</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\wordlib.c</PathWithFileName>
@@ -1158,7 +1158,7 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>22</TopLine>
+      <TopLine>26</TopLine>
       <CurrentLine>37</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\para.c</PathWithFileName>
@@ -1170,10 +1170,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>3</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>547</TopLine>
-      <CurrentLine>558</CurrentLine>
+      <TopLine>37</TopLine>
+      <CurrentLine>51</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\atom.c</PathWithFileName>
       <FilenameWithoutPath>atom.c</FilenameWithoutPath>
@@ -1200,7 +1200,7 @@
       <Focus>0</Focus>
       <ColumnNumber>16</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>289</TopLine>
+      <TopLine>295</TopLine>
       <CurrentLine>306</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\page.c</PathWithFileName>
@@ -1214,7 +1214,7 @@
       <Focus>0</Focus>
       <ColumnNumber>9</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>372</TopLine>
+      <TopLine>374</TopLine>
       <CurrentLine>385</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\KeyResponse.c</PathWithFileName>
@@ -1405,34 +1405,8 @@
   </AlienFiles>
 
   <AlienFiles>
-    <PathWithFilename>F:\电动执行机构2\CODE\Git\Valve_2_add_modbus_control\USER\atom.h</PathWithFilename>
-    <TopLine>98</TopLine>
-    <CurrentLine>107</CurrentLine>
-    <Constant>0</Constant>
-    <WindowPosition>
-      <length>0</length>
-      <flags>0</flags>
-      <showCmd>0</showCmd>
-      <MinPosition>
-        <xPos>0</xPos>
-        <yPos>0</yPos>
-      </MinPosition>
-      <MaxPosition>
-        <xPos>0</xPos>
-        <yPos>0</yPos>
-      </MaxPosition>
-      <NormalPosition>
-        <Top>0</Top>
-        <Left>0</Left>
-        <Right>0</Right>
-        <Bottom>0</Bottom>
-      </NormalPosition>
-    </WindowPosition>
-  </AlienFiles>
-
-  <AlienFiles>
     <PathWithFilename>C:\Program Files (x86)\MDK422\ARM\INC\ST\STM32F10x\stm32f10x_type.h</PathWithFilename>
-    <TopLine>10</TopLine>
+    <TopLine>12</TopLine>
     <CurrentLine>23</CurrentLine>
     <Constant>0</Constant>
     <WindowPosition>
@@ -1510,8 +1484,34 @@
 
   <AlienFiles>
     <PathWithFilename>F:\电动执行机构2\CODE\Git\Valve_2_add_modbus_control\USER\para.h</PathWithFilename>
-    <TopLine>163</TopLine>
+    <TopLine>172</TopLine>
     <CurrentLine>183</CurrentLine>
+    <Constant>0</Constant>
+    <WindowPosition>
+      <length>0</length>
+      <flags>0</flags>
+      <showCmd>0</showCmd>
+      <MinPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MinPosition>
+      <MaxPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MaxPosition>
+      <NormalPosition>
+        <Top>0</Top>
+        <Left>0</Left>
+        <Right>0</Right>
+        <Bottom>0</Bottom>
+      </NormalPosition>
+    </WindowPosition>
+  </AlienFiles>
+
+  <AlienFiles>
+    <PathWithFilename>F:\电动执行机构2\CODE\Git\Valve_2_add_modbus_control\USER\atom.h</PathWithFilename>
+    <TopLine>98</TopLine>
+    <CurrentLine>107</CurrentLine>
     <Constant>0</Constant>
     <WindowPosition>
       <length>0</length>
@@ -1542,9 +1542,21 @@
       <ActiveTab>5</ActiveTab>
       <Documents>
         <Doc>
+          <Name>.\atom.c</Name>
+          <ColumnNumber>3</ColumnNumber>
+          <TopLine>37</TopLine>
+          <CurrentLine>57</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\area.c</Name>
+          <ColumnNumber>0</ColumnNumber>
+          <TopLine>2148</TopLine>
+          <CurrentLine>2157</CurrentLine>
+        </Doc>
+        <Doc>
           <Name>.\led.c</Name>
           <ColumnNumber>0</ColumnNumber>
-          <TopLine>1</TopLine>
+          <TopLine>3</TopLine>
           <CurrentLine>14</CurrentLine>
         </Doc>
         <Doc>
@@ -1561,9 +1573,9 @@
         </Doc>
         <Doc>
           <Name>.\current.c</Name>
-          <ColumnNumber>0</ColumnNumber>
-          <TopLine>43</TopLine>
-          <CurrentLine>52</CurrentLine>
+          <ColumnNumber>19</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>8</CurrentLine>
         </Doc>
         <Doc>
           <Name>.\SSR.c</Name>
@@ -1573,14 +1585,14 @@
         </Doc>
         <Doc>
           <Name>.\main.c</Name>
-          <ColumnNumber>47</ColumnNumber>
-          <TopLine>430</TopLine>
-          <CurrentLine>444</CurrentLine>
+          <ColumnNumber>9</ColumnNumber>
+          <TopLine>319</TopLine>
+          <CurrentLine>333</CurrentLine>
         </Doc>
         <Doc>
           <Name>..\FWlib\src\stm32f10x_usart.c</Name>
           <ColumnNumber>79</ColumnNumber>
-          <TopLine>231</TopLine>
+          <TopLine>233</TopLine>
           <CurrentLine>244</CurrentLine>
         </Doc>
         <Doc>
@@ -1592,25 +1604,25 @@
         <Doc>
           <Name>.\para.c</Name>
           <ColumnNumber>0</ColumnNumber>
-          <TopLine>22</TopLine>
+          <TopLine>26</TopLine>
           <CurrentLine>37</CurrentLine>
         </Doc>
         <Doc>
           <Name>.\KeyResponse.c</Name>
           <ColumnNumber>9</ColumnNumber>
-          <TopLine>372</TopLine>
+          <TopLine>374</TopLine>
           <CurrentLine>385</CurrentLine>
         </Doc>
         <Doc>
           <Name>.\page.c</Name>
           <ColumnNumber>16</ColumnNumber>
-          <TopLine>289</TopLine>
+          <TopLine>295</TopLine>
           <CurrentLine>306</CurrentLine>
         </Doc>
         <Doc>
           <Name>para.h</Name>
           <ColumnNumber>21</ColumnNumber>
-          <TopLine>163</TopLine>
+          <TopLine>172</TopLine>
           <CurrentLine>183</CurrentLine>
         </Doc>
         <Doc>
@@ -1622,20 +1634,8 @@
         <Doc>
           <Name>.\wordlib.c</Name>
           <ColumnNumber>25</ColumnNumber>
-          <TopLine>567</TopLine>
+          <TopLine>569</TopLine>
           <CurrentLine>580</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>.\area.c</Name>
-          <ColumnNumber>0</ColumnNumber>
-          <TopLine>2148</TopLine>
-          <CurrentLine>2157</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>.\atom.c</Name>
-          <ColumnNumber>0</ColumnNumber>
-          <TopLine>547</TopLine>
-          <CurrentLine>558</CurrentLine>
         </Doc>
         <Doc>
           <Name>..\CMSIS\startup\startup_stm32f10x_md.s</Name>
@@ -1652,7 +1652,7 @@
         <Doc>
           <Name>C:\Program Files (x86)\MDK422\ARM\INC\ST\STM32F10x\stm32f10x_type.h</Name>
           <ColumnNumber>0</ColumnNumber>
-          <TopLine>10</TopLine>
+          <TopLine>12</TopLine>
           <CurrentLine>23</CurrentLine>
         </Doc>
         <Doc>
@@ -1664,7 +1664,7 @@
         <Doc>
           <Name>.\PWM.C</Name>
           <ColumnNumber>45</ColumnNumber>
-          <TopLine>74</TopLine>
+          <TopLine>76</TopLine>
           <CurrentLine>87</CurrentLine>
         </Doc>
         <Doc>
@@ -1742,7 +1742,7 @@
         <Doc>
           <Name>.\io.c</Name>
           <ColumnNumber>0</ColumnNumber>
-          <TopLine>8</TopLine>
+          <TopLine>18</TopLine>
           <CurrentLine>29</CurrentLine>
         </Doc>
       </Documents>
