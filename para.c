@@ -56,8 +56,14 @@ void ParaInit(void)
 	}
 	if( ParaArray[SelfLearnRec] == NoHavedSelfLearn )
 	{
-		tempmax = ParaArray[SetValveMax];
-		tempmin = ParaArray[SetValveMin];
+		//tempmax = ParaArray[SetValveMax];
+		//tempmin = ParaArray[SetValveMin];
+		tempmin = ParaArray[SetValveMin16High]<<16;
+		tempmin = tempmin + ParaArray[SetValveMin16Low];
+		tempmax = ParaArray[SetValveMax16High]<<16;
+		tempmax = tempmax + ParaArray[SetValveMax16Low];
+		
+
 		weight = 10000.0/((float)tempmax - (float)tempmin);
 		//这里要的只是一个绝对值
 		if( weight < 0 )

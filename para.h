@@ -6,7 +6,7 @@
 
 //表示参数部分长度（包括两个crc的）
 //51是参数总个数，在SPI_FLASH_BufferRead做参数的时候乘以4 是因为每个参数是32bits的int，而要适应8bits的flash写函数，故这样操作
-#define  ParaArrayLength  	(59)
+#define  ParaArrayLength  	(63)
 
 //参数表的第0位没有用，有32个字节也可以存储CRC和长度
 //先用来表示修改了多少次  
@@ -147,6 +147,14 @@
 //定义CRC位置，用来校验所有参数是否读取正确	 （这里是定义成8bbit还是32bit？？）
 #define  CRC_H						57
 #define  CRC_L						58	
+
+
+//阀位标定 0%  100%
+#define  SetValveMin16Low 		59
+#define  SetValveMin16High 		60
+
+#define  SetValveMax16Low 		61
+#define  SetValveMax16High 		62	
 
 extern int ValvePosValue ;		//三位数，最后一位是小数位
 extern int ValvePosValueLast; 

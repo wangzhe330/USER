@@ -5,6 +5,9 @@
 float current_in_val = 0;
 int current_set_valve_val = 0;
 int ValveSetVal = 0;
+int ValveSetValRec[4] = {0};
+int ValveSetValRecFlag = 0;
+int ValveSetValCmpCnt = 0;
 int ValveSetValTemp[25];
 int ValveSetValTempCnt = 0;
 int ValveSetExecuteFlag = 0;	//阀位设定执行标志位 0 为未执行，1 为已执行

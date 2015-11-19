@@ -285,13 +285,13 @@ void page2area1(void){
 			ch_label[5].type = 'c';
 			switch( ParaArray[FarawayMode] ){
 				case pluse_mode:
-					ch_label[5].code[0] = 4;
-					ch_label[5].code[1] = 5;
+					ch_label[5].code[0] = 86;
+					ch_label[5].code[1] = 87;
 					ch_label[5].code[2] = 6;	
 					break;
 				case hold_mode:
-					ch_label[5].code[0] = 86;
-					ch_label[5].code[1] = 87;
+					ch_label[5].code[0] = 4;
+					ch_label[5].code[1] = 5;
 					ch_label[5].code[2] = 6;
 					break;
 				case pc_mode:

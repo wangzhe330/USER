@@ -76,7 +76,7 @@ void USART1_IRQHandler(void)                	//串口1中断服务程序
 		}else if(UartDataState == 2){
 			UartData[UartDataRec] = Res;
 			UartDataRec ++;
-			if(UartDataRec == 2)
+			if(UartDataRec == 3)
 			{
 				UartDataState = 0;	//复位
 				UartDataRec = 0;	
@@ -150,7 +150,8 @@ void USART2_IRQHandler(void)                	//串口1中断服务程序
 		}else if(UartDataState == 2){
 			UartData[UartDataRec] = Res;
 			UartDataRec ++;
-			if(UartDataRec == 2)
+			//wz 修改下面2为3 11.18南通，为了多读一个字节的编码器数据，编码器是24位的
+			if(UartDataRec == 3)
 			{
 				UartDataState = 0;	//复位
 				UartDataRec = 0;	

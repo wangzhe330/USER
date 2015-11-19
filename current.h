@@ -5,6 +5,11 @@ extern float current_in_val;
 extern int current_set_valve_val;
 extern int ValveSetVal;
 
+extern int ValveSetValRec[4];
+extern int ValveSetValRecFlag;
+extern int ValveSetValCmpCnt;
+
+
 extern int ValveSetValTemp[25];
 extern int ValveSetValTempCnt ;
 extern int ValveSetExecuteFlag ;

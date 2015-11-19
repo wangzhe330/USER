@@ -227,16 +227,16 @@ void faraway_mode(void)
 
 	if( ParaArray[FarawayMode] == pluse_mode )
 	{
-		//脉冲式
-		ch_label[1].code[0] = 4;
-		ch_label[1].code[1] = 5;
+		//脉冲式   为了不破坏控制逻辑，只能够对调 显示的 脉冲 和 维持
+		ch_label[1].code[0] = 86;
+		ch_label[1].code[1] = 87;
 		ch_label[1].code[2] = 6; 
 	}
 	if( ParaArray[FarawayMode] == hold_mode )
 	{
 		//维持
-		ch_label[1].code[0] = 86;
-		ch_label[1].code[1] = 87;
+		 ch_label[1].code[0] = 4;
+		ch_label[1].code[1] = 5;
 		ch_label[1].code[2] = 6; 
 	} 
 	if( ParaArray[FarawayMode] == pc_mode )
@@ -889,6 +889,7 @@ void page6inop()
 		{
 			LastPageNum = PageNum;
 			PageNum = 3;			//跳转到了页面3，参数设置页面
+			//AreaNum = 0;
 			PageChageFlage = 1;		
 		}else{						//密码不正确，刷新当前页面
 			PageChageFlage = 1;	

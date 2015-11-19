@@ -36,8 +36,12 @@ volatile u32 time; // ms 计时变量
 volatile u16 time_10ms;	 //10ms 计时器变量
 
 //编码器数据
-u16 EncoderData = 0;
-u16 temp = 0;
+u32 EncoderData = 0;
+u32 temp = 0;
+
+u32 SetValveMin32Bit = 0;
+u32 SetValveMax32Bit = 0;
+
 
 int auto_set_flag = 0;
 int AutoSM = 0; //自学习状态机
@@ -59,6 +63,8 @@ int ValveOpenError = 0 ,ValveCloseError = 0;
 float set_k = 0.0;
 
 int ValveClosePluseFlag = 0,ValveOpenPluseFlag = 0;
+float debug_t1 = 0.0, debug_t2 = 0.0 ,debug_t3 = 0.0;
+
 
 //初始化函数，用来初始化系统的各个模块
 void ValveSysInit()
@@ -223,14 +229,25 @@ int main(void)
 			GetEncoderPara();
 			Delay_ms(2);
 
-			EncoderData = UartData[1];
+			//wz 修改 11.18南通 针对编码器可能是24位的修改
+			EncoderData = UartData[2];
+			EncoderData = EncoderData<<8;
+			EncoderData += UartData[1];				
 			EncoderData = EncoderData<<8;
 			EncoderData += UartData[0];
+
 			temp = EncoderData;	
 			EncoderCommEnd();
 			 		
 			ValvePosValueLast = ValvePosValue;
-
+			
+			//wzdebug 看一下下面四个变量的值 是否恢复成为32位的了
+			//wz 编码器32位的算法
+			SetValveMin32Bit = ParaArray[SetValveMin16High]<<16;
+			SetValveMin32Bit = SetValveMin32Bit + ParaArray[SetValveMin16Low];
+			SetValveMax32Bit = ParaArray[SetValveMax16High]<<16;
+			SetValveMax32Bit = SetValveMax32Bit + ParaArray[SetValveMax16Low];
+			/*			
 			//ValvePosValue = (int)(((float) EncoderData - 46854.0 )/9810.0*1000.0);
 			//0%的编码器值 是比 100%的编码器值 大的
 			if(ParaArray[SetValveMin] > ParaArray[SetValveMax])
@@ -243,7 +260,12 @@ int main(void)
 			{
 				//guzhang 这里应该给出一个设定值故障
 				ValvePosValue = (int)(((float) EncoderData - 46854.0 )/9810.0*1000.0);
-			}
+			} */
+			debug_t1 = (float) EncoderData - (float)SetValveMin32Bit ;
+			debug_t2 = (float)SetValveMax32Bit-(float)SetValveMin32Bit;
+			debug_t3 = debug_t1/debug_t2*1000.0;
+			ValvePosValue = (int)debug_t3;										
+			
 
 			//wz 0% 零位
 			if( ValvePosValue < 0 && ValvePosValue > -3)
@@ -255,8 +277,19 @@ int main(void)
 			SPEED =  ValvePosValue - ValvePosValueLast;		//求出速度
 			if( SPEED<0 ) SPEED = 0-SPEED;
 
-			ValvePosShow();
-
+			//ValvePosShow();
+			//wzdebug  设置终端位置的时候 在右上角 显示 编码器的值
+			if(PageNum == 3 && AreaNum == 1){
+				ascii_1608(36,0,english[EncoderData%10000000/1000000+18],0);
+				ascii_1608(40,0,english[EncoderData%1000000/100000+18],0);
+				ascii_1608(44,0,english[EncoderData%100000/10000+18],0);	
+				ascii_1608(48,0,english[EncoderData%10000/1000+18],0);
+				ascii_1608(52,0,english[EncoderData%1000/100+18],0);
+				ascii_1608(56,0,english[(EncoderData%100)/10+18],0);
+				ascii_1608(60,0,english[EncoderData%10+18],0);	
+			}else{
+				ValvePosShow();	
+			}
 			ValveFreedback(EncoderData);
 
 			if(AreaMode == 1){	
@@ -288,10 +321,14 @@ int main(void)
 					FarawaySM = 0;		//状态机=0  表示可以设置参数
 				}
 			}
-			//远程模式去读取设定值，每20ms*20=400ms一次
+			//远程模式去读取设定值，每20ms*10=200ms一次
 			if(Main_KEY_State == 2)
+			//if(1)
 			{
 				
+				//wzdebug  11.18南通 调试
+				
+				//if(1)
 				if( ParaArray[FarawayMode] == analog_mode  )
 				{	
 				

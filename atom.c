@@ -43,6 +43,7 @@ float AD654ToCurrent(void){
 	//re = ( (float)ad654rec[0] - 80.0 )/20.0 + 4.0;
 	//ValveSetVal	= ((float)AD654F - 200.0 )*1.25 ;
 
+	//wzdebug  11.18南通 20~120的情况下，这里是不是要改的更严格一点？
 	if( (ad654rec[0]-ad654rec[1]>5 && ad654rec[1]-ad654rec[2]>5) || (ad654rec[1]-ad654rec[0]>5 && ad654rec[2]-ad654rec[1]>5) )
 		sum = ad654rec[0];
 	else 
@@ -56,7 +57,6 @@ float AD654ToCurrent(void){
 	}	  */
 	//ValveSetVal	= ((float)sum - ParaArray[Set8ma] )/()*500.0+250.0 ;
 	ValveSetVal	=(int)( ((float)(sum - ParaArray[Set4ma] ))*set_k  );
-	
 
 	if( ValveSetVal > 995 && ValveSetVal < 1190 )
 		ValveSetVal = 1000;
@@ -86,7 +86,28 @@ float AD654ToCurrent(void){
 		FaultTotal = FaultTotal & ~FaultSigBreakMask;
 	if(ValveSetVal >= -52 && ValveSetVal <= 1190){
 		FaultTotal = FaultTotal & ~FaultSigOverMask;	
-	}	
+	}
+
+	ValveSetValRec[3] = ValveSetValRec[2];
+	ValveSetValRec[2] = ValveSetValRec[1];
+	ValveSetValRec[1] = ValveSetValRec[0];
+	ValveSetValRec[0] = ValveSetVal;
+	if(ValveSetVal == 0)
+	{
+		ValveSetValRecFlag = 1;			
+	}
+	if(ValveSetValRecFlag == 1)
+	{
+		if(!(ValveSetValRec[1]&ValveSetValRec[0]))//	ValveSetValRec[3]&ValveSetValRec[2]&
+			ValveSetVal = 0;	
+		ValveSetValCmpCnt++;
+		if(ValveSetValCmpCnt == 2)
+		{
+			ValveSetValRecFlag = 0; 
+			ValveSetValCmpCnt = 0;	
+		}
+	}
+		
 	/*
 	ad654rec[9] = ad654rec[8];	
 	ad654rec[8] = ad654rec[7]; 
@@ -537,15 +558,25 @@ void page3area4atom3op(void){
 //终端
 //页面3area3atom4op 标定参数  设定当前位置为阀位0%
 void page3area3atom0op(){
-
+	
 	//获取编码器当前值   这里先直接用每20ms读取一次的编码器值EncoderData
-	ParaArray[SetValveMin] = EncoderData;
+	//ParaArray[SetValveMin] = EncoderData;
 	//不应该这样直接操作，应该还是将 EncoderData 存入FLASH中的 SetValveMin_ , 然后SetValveMin，每次开机或者设置完毕之后从FLASH里面更新过来
+	
+	//wz 修改 11.18南通 编码器修改为24位
+	ParaArray[SetValveMin16Low] = (u16) EncoderData;
+	ParaArray[SetValveMin16High] =(u16) ((EncoderData>>16)&0xffff);
 
 }
 //页面3area3op5 标定参数  设定当前位置为阀位100%  
 void page3area3atom1op(){	
-	ParaArray[SetValveMax] = EncoderData;
+	//ParaArray[SetValveMax] = EncoderData;
+
+	//wz 修改 11.18南通 编码器修改为24位
+	ParaArray[SetValveMax16Low] = (u16) EncoderData;
+	ParaArray[SetValveMax16High] =(u16) ((EncoderData>>16)&0xffff);
+
+	ParaArray[SelfLearnRec] = NoHavedSelfLearn ;	
 
 	ParaArray[SelfLearnRec] = NoHavedSelfLearn ;	
 }  
