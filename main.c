@@ -35,6 +35,12 @@ extern int ad654rec[10];
 volatile u32 time; // ms 计时变量
 volatile u16 time_10ms;	 //10ms 计时器变量
 
+volatile u32 time_5s;	 //5s 计时器变量
+volatile u32 time_60s;	 //60s 计时器变量
+u16 ButtonFlag = 0;		//如果这个值==1 说明有按键操作  那么就不屏保
+u16 ScreenFlag = 0;		//开始屏保的标志位
+u16 ScreenCnt = 0;		//屏保计数器
+
 //编码器数据
 u32 EncoderData = 0;
 u32 temp = 0;
@@ -179,20 +185,27 @@ int main(void)
 		{
 			if(Main_KEY_State == 0)	   //设置模式
 			{
-				//wz 这里做了一点小调整 181~191
-				if(AreaMode == 0)
-				{
-					if(InputMode == 0)
-						PageKeyResponse(KEY);
-					else if(InputMode == 1)
-						InputKeyResponse(KEY);
-				}
-				else if(AreaMode == 1)		//在area模式下，每个按键动作有了新的意义
-				{
-					if(InputMode == 0)
-						AreaKeyResponse(KEY);									
-					else if(InputMode == 1)
-						InputKeyResponse(KEY);	
+				//wz 11.18南通
+				if(ScreenFlag == 1)
+ 				{
+					//屏保模式下不响应动作
+					page_mode();	
+ 				}
+				else{
+					if(AreaMode == 0)
+					{
+						if(InputMode == 0)
+							PageKeyResponse(KEY);
+						else if(InputMode == 1)
+							InputKeyResponse(KEY);
+					}
+					else if(AreaMode == 1)		//在area模式下，每个按键动作有了新的意义
+					{
+						if(InputMode == 0)
+							AreaKeyResponse(KEY);									
+						else if(InputMode == 1)
+							InputKeyResponse(KEY);	
+					}
 				}
 				
 				//bug？ 没有else了
@@ -207,8 +220,12 @@ int main(void)
 			if( Main_KEY_State == 2)   //远程模式
 			{
 				FarawayKeyResponse(KEY);
-				KEY_Flag = 0;	
+				KEY_Flag = 0;					
 			}
+						//wz 11.18 屏保
+			ButtonFlag = 1;	//有动作发生，切出屏保
+			ScreenFlag = 0;
+			time_60s =0;
 		 }
 
 		//定时器驱动的
@@ -519,7 +536,9 @@ int main(void)
 
 			if(Main_KEY_State == 0)
 			{
-				PageNum = 6;
+				//wz  从设置切出去之后 再切进来的时候应该要到初始界面  所以PageNum = 1;
+				PageNum = 1;
+				
 				page_mode();
 				FaultShowFlag = 0;				
 				SSRSTOP();
@@ -538,6 +557,10 @@ int main(void)
 			}
 					
 			Main_State_Change = 0;
+			//wz11.18 屏保
+			ButtonFlag = 1;	//有动作发生，切出屏保
+			ScreenFlag = 0;
+			time_60s = 0;
 		}  
 	
 		//故障检测 
@@ -814,6 +837,54 @@ int main(void)
 		}						 */
 		//wz 保护电机
 		//if(ValvePosValue < 20 || ValvePosValue > 980 ) SSRSTOP(); 
+		
+		//60s 无按键动作的情况下，进入屏保模式	600000
+		if(time_60s >= 50000)
+		{
+			if (ButtonFlag == 0){  //任何按键操作将会打断屏保 （问一下：远程操作是否启动屏保？）
+				//没有按键按下的时候 执行屏保
+				ScreenFlag = 1;
+				ScreenCnt = 0;
+			}
+			else{
+				//有按键动作 则退出屏保
+				ScreenFlag = 0;
+				time_60s=0;	
+			}	
+			ButtonFlag =0;
+			time_60s =0 ;
+		}
+		if(ScreenFlag==1&&ButtonFlag ==0)
+		{
+			//开始显示屏保
+			if(time_5s>=3000){
+				time_5s = 0;
+				
+				if(ScreenCnt == 2){
+					ScreenCnt=0; 
+				}
+				Fill_RAM(0x00);
+				switch (ScreenCnt){
+					case 0:
+						ascii_1608(0,16,english[18],0);
+						ascii_1608(4,16,english[18],0);	
+						ascii_1608(8,16,english[18],0);
+						ascii_1608(12,16,english[18],0);
+						ascii_1608(16,16,english[18],0);
+						ascii_1608(20,16,english[18],0);	
+					break;
+					case 1:
+						ascii_1608(32,32,english[18],0);
+						ascii_1608(36,32,english[18],0);	
+						ascii_1608(40,32,english[18],0);
+						ascii_1608(44,32,english[18],0);
+						ascii_1608(48,32,english[18],0);
+						ascii_1608(52,32,english[18],0);	
+					break;
+				}
+				ScreenCnt++;
+			}
+		}
 	}
 }
 

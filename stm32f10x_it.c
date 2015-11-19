@@ -33,7 +33,9 @@ extern void TimingDelay_Decrement(void);
 extern u32 time;
 extern u16 time_10ms;
 
-extern 
+extern u32 time_5s;
+extern u32 time_60s;
+
 
 /** @addtogroup Template_Project
   * @{
@@ -156,6 +158,8 @@ void TIM2_IRQHandler(void)
 		TIM_ClearITPendingBit(TIM2 , TIM_FLAG_Update);    
   		time++;
 		time_10ms++;
+		time_60s++;
+		time_5s++;
 		/*
 		if( time%100 == 0 )	   //wz Ô­À´ÊÇ500
 		{
