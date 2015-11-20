@@ -37,21 +37,11 @@ void ValveFreedback(int e)
 int current_out(float x)
 {
 	float dty = 0;
-	x=x-0.1;
+	//x=x-0.1;
 	//wz  //bug	  这里全开
-	
+	/*
 	if(x<20.0&&x>4.0)
 	{
-		//wz这里应该加入对信号模块是否设置过的检查，如果设置过，就用flash中的参数去计算，如果没有设置过，还是要用一个固定的式子
-		//dty = 2880.0 - 8.0*x;
-		//dty = 5768.0 - 16.0*x;
-		//dty = ( x*100.0 - (float)ParaArray[Feedback8ma])/(  (float)ParaArray[Feedback16ma] - (float)ParaArray[Feedback8ma])*( (float)ParaArray[Feedback16maDty]-(float)ParaArray[Feedback8maDty])+ (float)ParaArray[Feedback8maDty];
-		/*
-		if ( x < 4.43)
-			dty = 5720 - (int)(13.79*(x-2.98));
-		else 
-			dty  = (int)( 5757.0 - 11.8*x -0.1672*x*x );
-		*/
 		dty = (int)(5758-10.83*x-0.252*x*x);
 
 	}
@@ -64,6 +54,33 @@ int current_out(float x)
 	{
 		dty = 5436;//5450
 	}
+	*/
+	//11.20  ok
+	/*
+	if(x<=4.0){								//<4
+		dty = 5712;
+	}else if(x<=8.0){						//4~8
+		dty = (int)(5767.305-13.895*x);
+	}else if(x<=12.0){						//8~12
+		dty = (int)(5779.07-15.365*x);
+	}else if(x<=16.0){				  		//12~16
+		dty = (int)(5798.6 - 16.995*x);
+	}else if(x<=20.0){						//16~20
+		dty = (int)(5858.14 - 20.7*x );				  	
+	}else{									//>20
+		dty =5444;
+	}
+	  */
+	
+	if(x<=4.0){								//<4
+		dty = 5712;
+	}else if(x<=20.0){						//4~8
+		dty = (int)(5756.1-10.4667*x-0.2447*x*x);				  	
+	}else{									//>20
+		dty =5444;
+	}
+
+
 	TIM_SetCompare1(TIM1, (int)dty);//y=2880-8*x (x为电流，y为占空比),2880~0mA,2832~4mA,2720~20mA 
 	return dty;
 }

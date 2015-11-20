@@ -158,7 +158,7 @@
           <Type>0</Type>
           <LineNumber>45</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134241082</Address>
+          <Address>134241118</Address>
           <ByteObject>0</ByteObject>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
@@ -173,7 +173,7 @@
           <Type>0</Type>
           <LineNumber>66</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134240978</Address>
+          <Address>134241014</Address>
           <ByteObject>0</ByteObject>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
@@ -188,7 +188,7 @@
           <Type>0</Type>
           <LineNumber>195</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134269466</Address>
+          <Address>134269630</Address>
           <ByteObject>0</ByteObject>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
@@ -203,7 +203,7 @@
           <Type>0</Type>
           <LineNumber>199</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134269490</Address>
+          <Address>134269654</Address>
           <ByteObject>0</ByteObject>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
@@ -218,7 +218,7 @@
           <Type>0</Type>
           <LineNumber>183</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134269378</Address>
+          <Address>134269542</Address>
           <ByteObject>0</ByteObject>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
@@ -233,7 +233,7 @@
           <Type>0</Type>
           <LineNumber>2304</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134261354</Address>
+          <Address>134261518</Address>
           <ByteObject>0</ByteObject>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
@@ -248,7 +248,7 @@
           <Type>0</Type>
           <LineNumber>2315</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134261436</Address>
+          <Address>134261600</Address>
           <ByteObject>0</ByteObject>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
@@ -263,7 +263,7 @@
           <Type>0</Type>
           <LineNumber>2323</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134261516</Address>
+          <Address>134261680</Address>
           <ByteObject>0</ByteObject>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
@@ -278,7 +278,7 @@
           <Type>0</Type>
           <LineNumber>2383</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134261892</Address>
+          <Address>134262056</Address>
           <ByteObject>0</ByteObject>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
@@ -293,7 +293,7 @@
           <Type>0</Type>
           <LineNumber>2423</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134262116</Address>
+          <Address>134262280</Address>
           <ByteObject>0</ByteObject>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
@@ -308,7 +308,7 @@
           <Type>0</Type>
           <LineNumber>2462</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134262326</Address>
+          <Address>134262490</Address>
           <ByteObject>0</ByteObject>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
@@ -323,7 +323,7 @@
           <Type>0</Type>
           <LineNumber>302</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134239476</Address>
+          <Address>134239512</Address>
           <ByteObject>0</ByteObject>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
@@ -338,7 +338,7 @@
           <Type>0</Type>
           <LineNumber>306</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134239498</Address>
+          <Address>134239534</Address>
           <ByteObject>0</ByteObject>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
@@ -351,9 +351,9 @@
         <Bp>
           <Number>13</Number>
           <Type>0</Type>
-          <LineNumber>312</LineNumber>
+          <LineNumber>898</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134220954</Address>
+          <Address>134224438</Address>
           <ByteObject>0</ByteObject>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
@@ -361,7 +361,7 @@
           <BreakIfRCount>1</BreakIfRCount>
           <Filename></Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\STM32_DEMO\main.c\312</Expression>
+          <Expression>\\STM32_DEMO\main.c\898</Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>
@@ -765,7 +765,7 @@
         <Ww>
           <count>46</count>
           <WinNumber>2</WinNumber>
-          <ItemText>current&lt;Enter expression&gt;</ItemText>
+          <ItemText>ParaArray</ItemText>
         </Ww>
       </WatchWindow2>
       <MemoryWindow1>
@@ -778,7 +778,7 @@
       <DebugFlag>
         <trace>0</trace>
         <periodic>0</periodic>
-        <aLwin>0</aLwin>
+        <aLwin>1</aLwin>
         <aCover>0</aCover>
         <aSer1>0</aSer1>
         <aSer2>0</aSer2>
@@ -838,10 +838,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>27</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>895</TopLine>
-      <CurrentLine>898</CurrentLine>
+      <TopLine>855</TopLine>
+      <CurrentLine>868</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\main.c</PathWithFileName>
       <FilenameWithoutPath>main.c</FilenameWithoutPath>
@@ -894,10 +894,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>29</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>174</TopLine>
-      <CurrentLine>177</CurrentLine>
+      <TopLine>47</TopLine>
+      <CurrentLine>59</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\fault.c</PathWithFileName>
       <FilenameWithoutPath>fault.c</FilenameWithoutPath>
@@ -1055,10 +1055,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>5</ColumnNumber>
+      <ColumnNumber>8</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>1007</TopLine>
-      <CurrentLine>1007</CurrentLine>
+      <TopLine>979</TopLine>
+      <CurrentLine>983</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\OLED.c</PathWithFileName>
       <FilenameWithoutPath>OLED.c</FilenameWithoutPath>
@@ -1139,10 +1139,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>12</ColumnNumber>
+      <ColumnNumber>28</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>50</TopLine>
-      <CurrentLine>59</CurrentLine>
+      <TopLine>46</TopLine>
+      <CurrentLine>63</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\current.c</PathWithFileName>
       <FilenameWithoutPath>current.c</FilenameWithoutPath>
@@ -1214,7 +1214,7 @@
       <GroupNumber>6</GroupNumber>
       <FileNumber>27</FileNumber>
       <FileType>1</FileType>
-      <tvExp>0</tvExp>
+      <tvExp>1</tvExp>
       <Focus>0</Focus>
       <ColumnNumber>24</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -1230,10 +1230,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>19</ColumnNumber>
+      <ColumnNumber>6</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>220</TopLine>
-      <CurrentLine>222</CurrentLine>
+      <CurrentLine>229</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\atom.c</PathWithFileName>
       <FilenameWithoutPath>atom.c</FilenameWithoutPath>
@@ -1258,10 +1258,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>37</ColumnNumber>
+      <ColumnNumber>18</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>257</TopLine>
-      <CurrentLine>266</CurrentLine>
+      <TopLine>252</TopLine>
+      <CurrentLine>275</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\page.c</PathWithFileName>
       <FilenameWithoutPath>page.c</FilenameWithoutPath>
@@ -1389,7 +1389,7 @@
   <AlienFiles>
     <PathWithFilename>E:\Valve_4_add_modbus_control   screen\USER\area.h</PathWithFilename>
     <TopLine>1</TopLine>
-    <CurrentLine>1</CurrentLine>
+    <CurrentLine>23</CurrentLine>
     <Constant>0</Constant>
     <WindowPosition>
       <length>0</length>
@@ -1519,7 +1519,7 @@
   <AlienFiles>
     <PathWithFilename>E:\Valve_4_add_modbus_control   screen\USER\current.h</PathWithFilename>
     <TopLine>1</TopLine>
-    <CurrentLine>1</CurrentLine>
+    <CurrentLine>21</CurrentLine>
     <Constant>0</Constant>
     <WindowPosition>
       <length>0</length>
@@ -1596,8 +1596,8 @@
 
   <AlienFiles>
     <PathWithFilename>E:\Valve_4_add_modbus_control   screen\USER\para.h</PathWithFilename>
-    <TopLine>52</TopLine>
-    <CurrentLine>52</CurrentLine>
+    <TopLine>130</TopLine>
+    <CurrentLine>145</CurrentLine>
     <Constant>0</Constant>
     <WindowPosition>
       <length>0</length>
@@ -1625,13 +1625,31 @@
     <ActiveMDIGroup>0</ActiveMDIGroup>
     <MDIGroup>
       <Size>100</Size>
-      <ActiveTab>4</ActiveTab>
+      <ActiveTab>0</ActiveTab>
       <Documents>
         <Doc>
-          <Name>.\fault.c</Name>
+          <Name>para.h</Name>
+          <ColumnNumber>17</ColumnNumber>
+          <TopLine>130</TopLine>
+          <CurrentLine>145</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\stm32f10x_it.c</Name>
           <ColumnNumber>0</ColumnNumber>
-          <TopLine>116</TopLine>
-          <CurrentLine>129</CurrentLine>
+          <TopLine>145</TopLine>
+          <CurrentLine>151</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\para.c</Name>
+          <ColumnNumber>14</ColumnNumber>
+          <TopLine>45</TopLine>
+          <CurrentLine>57</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\fault.c</Name>
+          <ColumnNumber>29</ColumnNumber>
+          <TopLine>47</TopLine>
+          <CurrentLine>59</CurrentLine>
         </Doc>
         <Doc>
           <Name>atom.h</Name>
@@ -1641,21 +1659,21 @@
         </Doc>
         <Doc>
           <Name>.\current.c</Name>
-          <ColumnNumber>12</ColumnNumber>
-          <TopLine>50</TopLine>
-          <CurrentLine>59</CurrentLine>
+          <ColumnNumber>28</ColumnNumber>
+          <TopLine>46</TopLine>
+          <CurrentLine>63</CurrentLine>
         </Doc>
         <Doc>
           <Name>current.h</Name>
           <ColumnNumber>0</ColumnNumber>
           <TopLine>1</TopLine>
-          <CurrentLine>1</CurrentLine>
+          <CurrentLine>21</CurrentLine>
         </Doc>
         <Doc>
           <Name>.\main.c</Name>
-          <ColumnNumber>20</ColumnNumber>
-          <TopLine>503</TopLine>
-          <CurrentLine>510</CurrentLine>
+          <ColumnNumber>26</ColumnNumber>
+          <TopLine>783</TopLine>
+          <CurrentLine>790</CurrentLine>
         </Doc>
         <Doc>
           <Name>.\area.c</Name>
@@ -1671,33 +1689,21 @@
         </Doc>
         <Doc>
           <Name>.\OLED.c</Name>
-          <ColumnNumber>8</ColumnNumber>
-          <TopLine>979</TopLine>
-          <CurrentLine>983</CurrentLine>
+          <ColumnNumber>0</ColumnNumber>
+          <TopLine>981</TopLine>
+          <CurrentLine>987</CurrentLine>
         </Doc>
         <Doc>
           <Name>.\wordlib.c</Name>
           <ColumnNumber>92</ColumnNumber>
           <TopLine>784</TopLine>
-          <CurrentLine>784</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>.\stm32f10x_it.c</Name>
-          <ColumnNumber>39</ColumnNumber>
-          <TopLine>170</TopLine>
-          <CurrentLine>180</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>.\para.c</Name>
-          <ColumnNumber>24</ColumnNumber>
-          <TopLine>21</TopLine>
-          <CurrentLine>33</CurrentLine>
+          <CurrentLine>807</CurrentLine>
         </Doc>
         <Doc>
           <Name>.\page.c</Name>
           <ColumnNumber>18</ColumnNumber>
           <TopLine>252</TopLine>
-          <CurrentLine>252</CurrentLine>
+          <CurrentLine>275</CurrentLine>
         </Doc>
         <Doc>
           <Name>.\KeyResponse.c</Name>
@@ -1740,12 +1746,6 @@
           <ColumnNumber>0</ColumnNumber>
           <TopLine>118</TopLine>
           <CurrentLine>121</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>para.h</Name>
-          <ColumnNumber>9</ColumnNumber>
-          <TopLine>52</TopLine>
-          <CurrentLine>52</CurrentLine>
         </Doc>
         <Doc>
           <Name>time_test.h</Name>
@@ -1805,7 +1805,7 @@
           <Name>area.h</Name>
           <ColumnNumber>0</ColumnNumber>
           <TopLine>1</TopLine>
-          <CurrentLine>1</CurrentLine>
+          <CurrentLine>23</CurrentLine>
         </Doc>
         <Doc>
           <Name>page.h</Name>

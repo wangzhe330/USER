@@ -884,7 +884,7 @@ void page6inop()
 	temp = 	input_op[0].num*1000 + input_op[1].num*100 + input_op[2].num*10 + input_op[3].num;
 	
 	//³õÊ¼×´Ì¬
-	if(ParaArray[Security] == 0xffff )
+	if(ParaArray[Security] == 0xffffffff )
 	{
 		ParaArray[Security] = 0;
 		//ÃÜÂëÕıÈ·
