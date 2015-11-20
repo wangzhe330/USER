@@ -48,6 +48,7 @@ int FaultTotal = 0;
 int FaultShowFlag = 0;
 
 extern int ValvePosValue;
+extern u16 ScreenFlag;
 
 //π ’œœ‘ æ
 void FaultShow(int x )
@@ -121,7 +122,7 @@ void FaultShow(int x )
 		hz_1616( 40 , 32 , chinese[17],0);
 		hz_1616( 48 , 32 , chinese[18],0);		
 	}
-	if(x == 0)
+	if(x == 0 && ScreenFlag==0)
 	{		
 		hz_1616( 8 , 32 , chinese[92],0);
 		hz_1616( 16 , 32 , chinese[92],0);
@@ -132,7 +133,6 @@ void FaultShow(int x )
 
 	} 	
 }
-
 
 
 //π ’œºÏ≤‚∫Ø ˝

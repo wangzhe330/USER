@@ -257,14 +257,16 @@ void faraway_mode(void)
 	ch_label[1].loc.y = 48;
 	ch_label[1].length = 3;
 	ch_label[1].type = 'c';
+
 	if(ParaArray[FarawayMode] == analog_mode)
 	{
 		//设定值
+		//nantong  在远程模拟量模式下，如果不需要显示设定值 三个字了，将 code[0\1\2]改为92
 		ch_label[2].loc.x = 16;
 		ch_label[2].loc.y = 16;
-		ch_label[2].code[0] = 9;
-		ch_label[2].code[1] = 32;
-		ch_label[2].code[2] = 48;
+		ch_label[2].code[0] = 9;//92;
+		ch_label[2].code[1] = 32;//92;
+		ch_label[2].code[2] = 48;////92;
 		ch_label[2].length = 3;
 		ch_label[2].type = 'c';
 	
@@ -272,6 +274,7 @@ void faraway_mode(void)
 	}else {
 		LabelLen = 2;
 	}
+	
 	LabelLenE = 0;	
 	OptionLen = 0;
 

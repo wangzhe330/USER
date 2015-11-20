@@ -29,7 +29,7 @@ void ValveFreedback(int e)
 	float current = 0.0;
 
 	current = ((float)(e - ParaArray[Feedback4maPos]))/((float)(ParaArray[Feedback20maPos] - ParaArray[Feedback4maPos]))*16.0 + 4.0;
-
+	//current = ((float)(e - ParaArray[Feedback4maPos]))/((float)(ParaArray[Feedback20maPos] - ParaArray[Feedback4maPos]))*16.0 + 4.0;
 	//current = (float)v/1000.0*16.0+4.0;
 	current_out( current );	
 }
@@ -37,27 +37,32 @@ void ValveFreedback(int e)
 int current_out(float x)
 {
 	float dty = 0;
+	x=x-0.1;
 	//wz  //bug	  这里全开
+	
 	if(x<20.0&&x>4.0)
 	{
 		//wz这里应该加入对信号模块是否设置过的检查，如果设置过，就用flash中的参数去计算，如果没有设置过，还是要用一个固定的式子
 		//dty = 2880.0 - 8.0*x;
 		//dty = 5768.0 - 16.0*x;
 		//dty = ( x*100.0 - (float)ParaArray[Feedback8ma])/(  (float)ParaArray[Feedback16ma] - (float)ParaArray[Feedback8ma])*( (float)ParaArray[Feedback16maDty]-(float)ParaArray[Feedback8maDty])+ (float)ParaArray[Feedback8maDty];
+		/*
 		if ( x < 4.43)
 			dty = 5720 - (int)(13.79*(x-2.98));
 		else 
 			dty  = (int)( 5757.0 - 11.8*x -0.1672*x*x );
+		*/
+		dty = (int)(5758-10.83*x-0.252*x*x);
 
 	}
 	else if( x <= 4.0 )
 	{
 		//guzhang  这里是不是要报警？但是阀位超行程应该已经报警	了
-		dty = 5706;
+		dty = 5660;
 	}
-	else if(x >= 20.0)
+	else if(x >= 19.9)
 	{
-		dty = 5454;
+		dty = 5436;//5450
 	}
 	TIM_SetCompare1(TIM1, (int)dty);//y=2880-8*x (x为电流，y为占空比),2880~0mA,2832~4mA,2720~20mA 
 	return dty;

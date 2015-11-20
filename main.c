@@ -307,7 +307,18 @@ int main(void)
 			}else{
 				ValvePosShow();	
 			}
-			ValveFreedback(EncoderData);
+
+			//wz 11.18南通 电流反馈要和显示的一致
+			if(ValvePosValue < 8){
+				ValveFreedback(ParaArray[Feedback4maPos]);
+			}
+			else if(ValvePosValue >= 8 && ValvePosValue <= 995){
+				ValveFreedback(EncoderData);
+			}
+			else if(ValvePosValue>995){
+				ValveFreedback(ParaArray[Feedback20maPos]);			
+			}
+
 
 			if(AreaMode == 1){	
 				if(PageNum == 3 && AreaNum == 4 && (PageAreaRec[PageNum][AreaNum] ==0 || PageAreaRec[PageNum][AreaNum]==1 ))
@@ -354,7 +365,12 @@ int main(void)
 					{ //wz 2015-3-23 20 //25
 						
 						AD654ToCurrent();
-						ValveSetShow();	//设定值显示											
+
+						//nantong  如果在远程模式下，不需要显示设定值了，用 // 将下面一行注释
+						//在没有屏保的情况下 才显示这个
+						if(ScreenFlag == 0){
+							ValveSetShow();	//设定值显示  											
+						}
 					
 						ValveSetValTempCnt = 0;
 	
@@ -841,7 +857,10 @@ int main(void)
 		//60s 无按键动作的情况下，进入屏保模式	600000
 		if(time_60s >= 50000)
 		{
-			if (ButtonFlag == 0){  //任何按键操作将会打断屏保 （问一下：远程操作是否启动屏保？）
+
+			//wz 11.18 如果有故障的话，就不屏保了，直接显示故障
+
+			if (ButtonFlag == 0 && FaultTotal==0){  //任何按键操作将会打断屏保 （问一下：远程操作是否启动屏保？）
 				//没有按键按下的时候 执行屏保
 				ScreenFlag = 1;
 				ScreenCnt = 0;
@@ -872,7 +891,7 @@ int main(void)
 					   	   hz_1616(24,16,chinese[175],0);
 						ascii_1608(36,16,english[18],0);
 						ascii_1608(40,16,english[18],0);
-						ascii_1608(44,16,english[19],0);	
+						ascii_1608(44,16,english[20],0);	
 					break;
 					case 1:
 						   hz_1616(16,32,chinese[172],0);
@@ -881,7 +900,7 @@ int main(void)
 					   	   hz_1616(40,32,chinese[175],0);
 						ascii_1608(52,32,english[18],0);
 						ascii_1608(56,32,english[18],0);
-						ascii_1608(60,32,english[19],0);	
+						ascii_1608(60,32,english[20],0);	
 					break;	
 					break;
 					case 2:
@@ -891,7 +910,7 @@ int main(void)
 					   	   hz_1616(24,48,chinese[175],0);
 						ascii_1608(36,48,english[18],0);
 						ascii_1608(40,48,english[18],0);
-						ascii_1608(44,48,english[19],0);	
+						ascii_1608(44,48,english[20],0);	
 					break;
 				}
 				ScreenCnt++;
