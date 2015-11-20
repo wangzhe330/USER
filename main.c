@@ -860,26 +860,38 @@ int main(void)
 			if(time_5s>=3000){
 				time_5s = 0;
 				
-				if(ScreenCnt == 2){
+				if(ScreenCnt == 3){
 					ScreenCnt=0; 
 				}
 				Fill_RAM(0x00);
 				switch (ScreenCnt){
 					case 0:
-						ascii_1608(0,16,english[18],0);
-						ascii_1608(4,16,english[18],0);	
-						ascii_1608(8,16,english[18],0);
-						ascii_1608(12,16,english[18],0);
-						ascii_1608(16,16,english[18],0);
-						ascii_1608(20,16,english[18],0);	
+						   hz_1616(0,16,chinese[172],0);
+					   	   hz_1616(8,16,chinese[173],0);
+					   	   hz_1616(16,16,chinese[174],0);
+					   	   hz_1616(24,16,chinese[175],0);
+						ascii_1608(36,16,english[18],0);
+						ascii_1608(40,16,english[18],0);
+						ascii_1608(44,16,english[19],0);	
 					break;
 					case 1:
-						ascii_1608(32,32,english[18],0);
-						ascii_1608(36,32,english[18],0);	
-						ascii_1608(40,32,english[18],0);
-						ascii_1608(44,32,english[18],0);
-						ascii_1608(48,32,english[18],0);
-						ascii_1608(52,32,english[18],0);	
+						   hz_1616(16,32,chinese[172],0);
+					   	   hz_1616(24,32,chinese[173],0);
+					   	   hz_1616(32,32,chinese[174],0);
+					   	   hz_1616(40,32,chinese[175],0);
+						ascii_1608(52,32,english[18],0);
+						ascii_1608(56,32,english[18],0);
+						ascii_1608(60,32,english[19],0);	
+					break;	
+					break;
+					case 2:
+						   hz_1616(0,48,chinese[172],0);
+					   	   hz_1616(8,48,chinese[173],0);
+					   	   hz_1616(16,48,chinese[174],0);
+					   	   hz_1616(24,48,chinese[175],0);
+						ascii_1608(36,48,english[18],0);
+						ascii_1608(40,48,english[18],0);
+						ascii_1608(44,48,english[19],0);	
 					break;
 				}
 				ScreenCnt++;

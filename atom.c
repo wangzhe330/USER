@@ -322,7 +322,7 @@ void ValvePosShow()
 		if( (FaultTotal & FaultJourneyOverMask) == 0 )
 		{
 			if(temp > 999)
-			{
+			{				
 			   	ascii_1608(40,0,english[temp/1000+18],0);
 				ascii_1608(44,0,english[temp%1000/100+18],0);
 				ascii_1608(48,0,english[temp%100/10+18],0);
