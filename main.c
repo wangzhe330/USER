@@ -554,7 +554,9 @@ int main(void)
 			{
 				//wz  从设置切出去之后 再切进来的时候应该要到初始界面  所以PageNum = 1;
 				PageNum = 1;
-				
+				AreaMode=0;	
+				InputMode=0;
+
 				page_mode();
 				FaultShowFlag = 0;				
 				SSRSTOP();
