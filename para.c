@@ -45,6 +45,11 @@ int PCAllCLoseSig = 0;	//全关信号
 int PCSetSig = 0;		//设定 模式
 int PCSetValve = 0; 	//设定值
 
+u8 ModbusCommand[16]={0};		//记录modbus命令的数组，是从组态王发送过来的命令
+u8 ModbusCommandCnt = 0;		//记录字节数的
+u8 ModbusReply[16]={0};			//modbus的应答消息
+u8 ModbusReplyCnt = 0;			//记录字节数目的
+
 //参数初始化，应该是去flash读取所有参数	  
 void ParaInit(void)
 {

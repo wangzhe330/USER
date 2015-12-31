@@ -220,7 +220,7 @@ void Serial3PutString(u8 *s)
 }
 
 //串口3接收中断
-void USART3_IRQHandler(void)
+void USART3_IRQHandler_old(void)
 {
 	char Res;
 	static int U3DataState = 0; //状态机
@@ -231,13 +231,16 @@ void USART3_IRQHandler(void)
 	{
 		//if(Serial3GetChar()==0x01)
 		//	Serial3PutString("\r\nUSART3 receive is successfull!\r\n");
-		Res =USART_ReceiveData(USART3);//(USART1->DR);	//读取接收到的数据
+  		Res =USART_ReceiveData(USART3);//(USART1->DR);	//读取接收到的数据
+		Serial3PutChar(Res);		
+		
 		if(  U3DataState == 0 ){
-			if (Res == 0x99) 		//地址码  改为#define 更好 
+			if (Res == 0x01) 		//地址码  改为#define 更好 
 				U3DataState = 1;
 			else 
 				U3DataState = 0; //复位
 		}else if(U3DataState == 1){
+		
 			if (Res == 0x01) 	//读取状态
 			{
 				//U3DataState =2;
@@ -340,10 +343,56 @@ void USART3_IRQHandler(void)
 					
 			U3DataState = 0;	
 		}
-
+		
 		USART_ClearITPendingBit(USART3, USART_IT_RXNE);
 	}
 }
+
+//串口3接收中断	   new modbus	  在中断里面把指令全部保存到数组里面，在中断外面判断跟回复指令
+void USART3_IRQHandler(void)
+{
+	char Res;
+	static int U3DataState = 0; //状态机
+	static char temp_8_high = 0 , temp_8_low = 0;
+	char high_8 = 0 , low_8 = 0 ;
+	int temp_16 = 0;
+	if(USART_GetITStatus(USART3, USART_IT_RXNE) != RESET)
+	{
+		//if(Serial3GetChar()==0x01)
+		//	Serial3PutString("\r\nUSART3 receive is successfull!\r\n");
+  		Res =USART_ReceiveData(USART3);//(USART1->DR);	//读取接收到的数据
+		//Serial3PutChar(Res);		
+		
+		if(  U3DataState == 0 ){
+			if (Res == 0x01) 		//地址码  改为#define 更好 
+			{
+				U3DataState = 1;
+				ModbusCommand[ModbusCommandCnt++]=Res;
+			}
+			else 
+				U3DataState = 0; //复位
+		}else if(U3DataState == 1){
+			if (Res == 0x05 || Res == 0x01) //写/读继电器
+			{
+				U3DataState = 2;
+				ModbusCommand[ModbusCommandCnt++]=Res;
+			}	
+		}
+		else if( U3DataState == 2)   //功能码0x05 写继电器
+		{
+			 ModbusCommand[ModbusCommandCnt]=Res;
+			 ModbusCommandCnt++;
+			 if(ModbusCommandCnt==8){
+			 	 U3DataState = 0;
+				 ModbusCommandCnt = 0;
+			 }
+		}
+		
+		
+		USART_ClearITPendingBit(USART3, USART_IT_RXNE);
+	}
+}
+
 
 int fputc(int ch, FILE *f)
 {

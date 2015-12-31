@@ -235,7 +235,7 @@ int main(void)
 			/* LED1 È¡·´ */      
 			GPIO_WriteBit(GPIOC, GPIO_Pin_8, 
 					(BitAction)((1-GPIO_ReadOutputDataBit(GPIOC, GPIO_Pin_8))));
-			Serial3PutChar(0x33);
+			//Serial3PutChar(0x55);
 				 
 		} 
 

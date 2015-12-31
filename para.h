@@ -191,6 +191,10 @@ extern int PCAllCLoseSig ;	//全关信号
 extern int PCSetSig ;		//设定 模式
 extern int PCSetValve ; 	//设定值
 
+extern u8 ModbusCommand[16];		//记录modbus命令的数组，是从组态王发送过来的命令
+extern u8 ModbusCommandCnt;
+extern u8 ModbusReply[16];			//modbus的应答消息
+extern u8 ModbusReplyCnt;
 
 void ParaInit(void);
 void ParaWriteToFlash(void);
