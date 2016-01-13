@@ -4,6 +4,8 @@
 #include "misc.h" 
 #include "para.h"
 #include "fault.h"
+
+#include "modbus.h"
  
 unsigned char UartData[20];
 unsigned char UartDataLen = 0;
@@ -359,7 +361,7 @@ void USART3_IRQHandler(void)
 	if(USART_GetITStatus(USART3, USART_IT_RXNE) != RESET)
 	{
 		//if(Serial3GetChar()==0x01)
-		//	Serial3PutString("\r\nUSART3 receive is successfull!\r\n");
+		//	Serial3PutString("\r\nUSART3 receive is successfull!\r\nl");
   		Res =USART_ReceiveData(USART3);//(USART1->DR);	//读取接收到的数据
 		//Serial3PutChar(Res);		
 		
@@ -385,6 +387,8 @@ void USART3_IRQHandler(void)
 			 if(ModbusCommandCnt==8){
 			 	 U3DataState = 0;
 				 ModbusCommandCnt = 0;
+
+				 DealMessage();
 			 }
 		}
 		
@@ -411,9 +415,9 @@ int fputc(int ch, FILE *f)
 
 void GetEncoderPara(void)
 {
-	USART_SendData(USART2, 0xD4);//向串口1发送数据
+	USART_SendData(USART2, 0xD4);//向串口2发送数据
 	while(USART_GetFlagStatus(USART2,USART_FLAG_TC)!=SET);//等待发送结束	
-	USART_SendData(USART2, 0xAA);//向串口1发送数据
+	USART_SendData(USART2, 0xAA);//向串口2发送数据
 	while(USART_GetFlagStatus(USART2,USART_FLAG_TC)!=SET);//等待发送结束
 	USART_SendData(USART2, 0x30);//向串口1发送数据
 	while(USART_GetFlagStatus(USART2,USART_FLAG_TC)!=SET);//等待发送结束

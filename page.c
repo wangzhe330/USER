@@ -235,17 +235,18 @@ void faraway_mode(void)
 	if( ParaArray[FarawayMode] == hold_mode )
 	{
 		//维持
-		 ch_label[1].code[0] = 4;
+		ch_label[1].code[0] = 4;
 		ch_label[1].code[1] = 5;
 		ch_label[1].code[2] = 6; 
 	} 
+	/*
 	if( ParaArray[FarawayMode] == pc_mode )
 	{
-		//双位式
+		//Modbus
 		ch_label[1].code[0] = 169;
 		ch_label[1].code[1] = 170;
 		ch_label[1].code[2] = 171; 
-	} 
+	} */ 
 	if( ParaArray[FarawayMode] == analog_mode )
 	{
 		//模拟式
@@ -277,6 +278,25 @@ void faraway_mode(void)
 	
 	LabelLenE = 0;	
 	OptionLen = 0;
+	
+	if( ParaArray[FarawayMode] == pc_mode )
+	{
+		//modbus
+		en_label[0].loc.x = 0;
+		en_label[0].loc.y = 48;
+		en_label[0].length = 6;
+		en_label[0].code[0] = 43;
+		en_label[0].code[1] = 44;
+		en_label[0].code[2] = 45;
+		en_label[0].code[3] = 46;
+		en_label[0].code[4] = 47;
+		en_label[0].code[5] = 48;
+		en_label[0].type = 'e';	
+
+		LabelLen = 1;
+		LabelLenE = 1;	
+		OptionLen = 0;
+	}  
 
 	//显示当前页面的静态部分
 	for(cnt_label=0;cnt_label<LabelLen;cnt_label++){

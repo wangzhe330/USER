@@ -1819,8 +1819,8 @@ void page3area3sub1()
 			ch_label[3].code[1] = 87;
 			ch_label[3].code[2] = 6;
 			ch_label[3].type = 'c';
-			//第三行第2列   计算机
-			//wz 485通信控制
+			//第三行第2列   计算机		   wz 这里修改为Modbus
+			/*wz 485通信控制
 			ch_label[5].loc.x = 40;
 			ch_label[5].loc.y = 48;
 			ch_label[5].length = 3;
@@ -1828,6 +1828,17 @@ void page3area3sub1()
 			ch_label[5].code[1] = 170;
 			ch_label[5].code[2] = 171;
 			ch_label[5].type = 'c';
+			*/
+			en_label[0].loc.x = 40;
+			en_label[0].loc.y = 48;
+			en_label[0].length = 6;
+			en_label[0].code[0] = 43;
+			en_label[0].code[1] = 44;
+			en_label[0].code[2] = 45;
+			en_label[0].code[3] = 46;
+			en_label[0].code[4] = 47;
+			en_label[0].code[5] = 48;
+			en_label[0].type = 'e';	
 		  		
 			//第四行第2列   模拟式 
 			ch_label[4].loc.x = 40;
@@ -1838,8 +1849,8 @@ void page3area3sub1()
 			ch_label[4].code[2] = 6;
 			ch_label[4].type = 'c';
 	
-			LabelLen = 6;
-			LabelLenE = 0;
+			LabelLen = 5;
+			LabelLenE = 1;
 			InputOpLen = 0;
 			InputOpRec = 0;
 			InputMode = 0;		//关闭输入参数模式

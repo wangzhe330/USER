@@ -526,6 +526,11 @@
               <FileType>1</FileType>
               <FilePath>.\spi_flash.c</FilePath>
             </File>
+            <File>
+              <FileName>io.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\io.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

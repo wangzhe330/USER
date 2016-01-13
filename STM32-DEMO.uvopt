@@ -149,7 +149,7 @@
         <SetRegEntry>
           <Number>0</Number>
           <Key>JL2CM3</Key>
-          <Name>-U99999994 -O78 -S0 -A0 -C0 -JU1 -JI127.0.0.1 -JP0 -RST0 -N00("ARM CoreSight SW-DP") -D00(1BA01477) -L00(0) -TO18 -TC10000000 -TP21 -TDS8007 -TDT0 -TDC1F -TIEFFFFFFFF -TIP8 -TB1 -TFE0 -FO7 -FD20000000 -FC800 -FN1 -FF0STM32F10x_512 -FS08000000 -FL080000</Name>
+          <Name>-U99999994 -O78 -S0 -A0 -C0 -JU1 -JI127.0.0.1 -JP0 -RST0 -N00("ARM CoreSight SW-DP") -D00(1BA01477) -L00(0) -TO18 -TC10000000 -TP21 -TDS8007 -TDT0 -TDC1F -TIEFFFFFFFF -TIP8 -TB1 -TFE0 -FO31 -FD20000000 -FC800 -FN1 -FF0STM32F10x_512 -FS08000000 -FL080000</Name>
         </SetRegEntry>
       </TargetDriverDllRegistry>
       <Breakpoint>
@@ -804,8 +804,8 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>131</TopLine>
-      <CurrentLine>131</CurrentLine>
+      <TopLine>0</TopLine>
+      <CurrentLine>0</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\CMSIS\startup\startup_stm32f10x_md.s</PathWithFileName>
       <FilenameWithoutPath>startup_stm32f10x_md.s</FilenameWithoutPath>
@@ -814,7 +814,7 @@
 
   <Group>
     <GroupName>USER</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <File>
@@ -823,10 +823,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>2</ColumnNumber>
+      <ColumnNumber>70</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>265</TopLine>
-      <CurrentLine>265</CurrentLine>
+      <TopLine>224</TopLine>
+      <CurrentLine>231</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\main.c</PathWithFileName>
       <FilenameWithoutPath>main.c</FilenameWithoutPath>
@@ -837,10 +837,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>29</ColumnNumber>
+      <ColumnNumber>24</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>59</TopLine>
-      <CurrentLine>59</CurrentLine>
+      <TopLine>0</TopLine>
+      <CurrentLine>0</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\stm32f10x_it.c</PathWithFileName>
       <FilenameWithoutPath>stm32f10x_it.c</FilenameWithoutPath>
@@ -853,8 +853,8 @@
       <Focus>0</Focus>
       <ColumnNumber>19</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>38</TopLine>
-      <CurrentLine>38</CurrentLine>
+      <TopLine>0</TopLine>
+      <CurrentLine>0</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\SysTick.c</PathWithFileName>
       <FilenameWithoutPath>SysTick.c</FilenameWithoutPath>
@@ -881,11 +881,25 @@
       <Focus>0</Focus>
       <ColumnNumber>18</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>137</TopLine>
-      <CurrentLine>137</CurrentLine>
+      <TopLine>0</TopLine>
+      <CurrentLine>0</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\fault.c</PathWithFileName>
       <FilenameWithoutPath>fault.c</FilenameWithoutPath>
+    </File>
+    <File>
+      <GroupNumber>2</GroupNumber>
+      <FileNumber>7</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <Focus>0</Focus>
+      <ColumnNumber>3</ColumnNumber>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <TopLine>10</TopLine>
+      <CurrentLine>22</CurrentLine>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\modbus.c</PathWithFileName>
+      <FilenameWithoutPath>modbus.c</FilenameWithoutPath>
     </File>
   </Group>
 
@@ -896,21 +910,21 @@
     <cbSel>0</cbSel>
     <File>
       <GroupNumber>3</GroupNumber>
-      <FileNumber>7</FileNumber>
+      <FileNumber>8</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>28</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>372</TopLine>
-      <CurrentLine>372</CurrentLine>
+      <TopLine>0</TopLine>
+      <CurrentLine>0</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\FWlib\src\stm32f10x_gpio.c</PathWithFileName>
       <FilenameWithoutPath>stm32f10x_gpio.c</FilenameWithoutPath>
     </File>
     <File>
       <GroupNumber>3</GroupNumber>
-      <FileNumber>8</FileNumber>
+      <FileNumber>9</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -924,7 +938,7 @@
     </File>
     <File>
       <GroupNumber>3</GroupNumber>
-      <FileNumber>9</FileNumber>
+      <FileNumber>10</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -938,7 +952,7 @@
     </File>
     <File>
       <GroupNumber>3</GroupNumber>
-      <FileNumber>10</FileNumber>
+      <FileNumber>11</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -952,35 +966,35 @@
     </File>
     <File>
       <GroupNumber>3</GroupNumber>
-      <FileNumber>11</FileNumber>
+      <FileNumber>12</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>340</TopLine>
-      <CurrentLine>348</CurrentLine>
+      <TopLine>0</TopLine>
+      <CurrentLine>0</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\FWlib\src\stm32f10x_usart.c</PathWithFileName>
       <FilenameWithoutPath>stm32f10x_usart.c</FilenameWithoutPath>
     </File>
     <File>
       <GroupNumber>3</GroupNumber>
-      <FileNumber>12</FileNumber>
+      <FileNumber>13</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>27</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>2627</TopLine>
-      <CurrentLine>2627</CurrentLine>
+      <TopLine>0</TopLine>
+      <CurrentLine>0</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\FWlib\src\stm32f10x_tim.c</PathWithFileName>
       <FilenameWithoutPath>stm32f10x_tim.c</FilenameWithoutPath>
     </File>
     <File>
       <GroupNumber>3</GroupNumber>
-      <FileNumber>13</FileNumber>
+      <FileNumber>14</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -1001,7 +1015,7 @@
     <cbSel>0</cbSel>
     <File>
       <GroupNumber>4</GroupNumber>
-      <FileNumber>14</FileNumber>
+      <FileNumber>15</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -1015,7 +1029,7 @@
     </File>
     <File>
       <GroupNumber>4</GroupNumber>
-      <FileNumber>15</FileNumber>
+      <FileNumber>16</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -1031,23 +1045,9 @@
 
   <Group>
     <GroupName>Hardwre</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
-    <File>
-      <GroupNumber>5</GroupNumber>
-      <FileNumber>16</FileNumber>
-      <FileType>1</FileType>
-      <tvExp>0</tvExp>
-      <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>981</TopLine>
-      <CurrentLine>987</CurrentLine>
-      <bDave2>0</bDave2>
-      <PathWithFileName>.\OLED.c</PathWithFileName>
-      <FilenameWithoutPath>OLED.c</FilenameWithoutPath>
-    </File>
     <File>
       <GroupNumber>5</GroupNumber>
       <FileNumber>17</FileNumber>
@@ -1056,11 +1056,11 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>160</TopLine>
-      <CurrentLine>163</CurrentLine>
+      <TopLine>0</TopLine>
+      <CurrentLine>0</CurrentLine>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\key.c</PathWithFileName>
-      <FilenameWithoutPath>key.c</FilenameWithoutPath>
+      <PathWithFileName>.\OLED.c</PathWithFileName>
+      <FilenameWithoutPath>OLED.c</FilenameWithoutPath>
     </File>
     <File>
       <GroupNumber>5</GroupNumber>
@@ -1070,11 +1070,11 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>1</TopLine>
-      <CurrentLine>1</CurrentLine>
+      <TopLine>0</TopLine>
+      <CurrentLine>0</CurrentLine>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\led.c</PathWithFileName>
-      <FilenameWithoutPath>led.c</FilenameWithoutPath>
+      <PathWithFileName>.\key.c</PathWithFileName>
+      <FilenameWithoutPath>key.c</FilenameWithoutPath>
     </File>
     <File>
       <GroupNumber>5</GroupNumber>
@@ -1084,11 +1084,11 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>340</TopLine>
-      <CurrentLine>348</CurrentLine>
+      <TopLine>0</TopLine>
+      <CurrentLine>0</CurrentLine>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\usart.c</PathWithFileName>
-      <FilenameWithoutPath>usart.c</FilenameWithoutPath>
+      <PathWithFileName>.\led.c</PathWithFileName>
+      <FilenameWithoutPath>led.c</FilenameWithoutPath>
     </File>
     <File>
       <GroupNumber>5</GroupNumber>
@@ -1096,13 +1096,13 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>31</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>118</TopLine>
-      <CurrentLine>121</CurrentLine>
+      <TopLine>265</TopLine>
+      <CurrentLine>271</CurrentLine>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Time_test.c</PathWithFileName>
-      <FilenameWithoutPath>Time_test.c</FilenameWithoutPath>
+      <PathWithFileName>.\usart.c</PathWithFileName>
+      <FilenameWithoutPath>usart.c</FilenameWithoutPath>
     </File>
     <File>
       <GroupNumber>5</GroupNumber>
@@ -1110,13 +1110,13 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>15</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>49</TopLine>
-      <CurrentLine>52</CurrentLine>
+      <TopLine>0</TopLine>
+      <CurrentLine>0</CurrentLine>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\SSR.c</PathWithFileName>
-      <FilenameWithoutPath>SSR.c</FilenameWithoutPath>
+      <PathWithFileName>.\Time_test.c</PathWithFileName>
+      <FilenameWithoutPath>Time_test.c</FilenameWithoutPath>
     </File>
     <File>
       <GroupNumber>5</GroupNumber>
@@ -1124,13 +1124,13 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>38</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>70</TopLine>
-      <CurrentLine>74</CurrentLine>
+      <TopLine>0</TopLine>
+      <CurrentLine>0</CurrentLine>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\current.c</PathWithFileName>
-      <FilenameWithoutPath>current.c</FilenameWithoutPath>
+      <PathWithFileName>.\SSR.c</PathWithFileName>
+      <FilenameWithoutPath>SSR.c</FilenameWithoutPath>
     </File>
     <File>
       <GroupNumber>5</GroupNumber>
@@ -1140,15 +1140,29 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>28</TopLine>
-      <CurrentLine>31</CurrentLine>
+      <TopLine>0</TopLine>
+      <CurrentLine>0</CurrentLine>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\current.c</PathWithFileName>
+      <FilenameWithoutPath>current.c</FilenameWithoutPath>
+    </File>
+    <File>
+      <GroupNumber>5</GroupNumber>
+      <FileNumber>24</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <Focus>0</Focus>
+      <ColumnNumber>0</ColumnNumber>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <TopLine>0</TopLine>
+      <CurrentLine>0</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\PWM.C</PathWithFileName>
       <FilenameWithoutPath>PWM.C</FilenameWithoutPath>
     </File>
     <File>
       <GroupNumber>5</GroupNumber>
-      <FileNumber>24</FileNumber>
+      <FileNumber>25</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -1162,14 +1176,14 @@
     </File>
     <File>
       <GroupNumber>5</GroupNumber>
-      <FileNumber>25</FileNumber>
+      <FileNumber>26</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>11</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>59</TopLine>
-      <CurrentLine>68</CurrentLine>
+      <TopLine>0</TopLine>
+      <CurrentLine>0</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\io.c</PathWithFileName>
       <FilenameWithoutPath>io.c</FilenameWithoutPath>
@@ -1183,31 +1197,17 @@
     <cbSel>0</cbSel>
     <File>
       <GroupNumber>6</GroupNumber>
-      <FileNumber>26</FileNumber>
-      <FileType>1</FileType>
-      <tvExp>0</tvExp>
-      <Focus>0</Focus>
-      <ColumnNumber>92</ColumnNumber>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>784</TopLine>
-      <CurrentLine>784</CurrentLine>
-      <bDave2>0</bDave2>
-      <PathWithFileName>.\wordlib.c</PathWithFileName>
-      <FilenameWithoutPath>wordlib.c</FilenameWithoutPath>
-    </File>
-    <File>
-      <GroupNumber>6</GroupNumber>
       <FileNumber>27</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>14</ColumnNumber>
+      <ColumnNumber>164</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>45</TopLine>
-      <CurrentLine>45</CurrentLine>
+      <TopLine>739</TopLine>
+      <CurrentLine>753</CurrentLine>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\para.c</PathWithFileName>
-      <FilenameWithoutPath>para.c</FilenameWithoutPath>
+      <PathWithFileName>.\wordlib.c</PathWithFileName>
+      <FilenameWithoutPath>wordlib.c</FilenameWithoutPath>
     </File>
     <File>
       <GroupNumber>6</GroupNumber>
@@ -1215,13 +1215,13 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>6</ColumnNumber>
+      <ColumnNumber>46</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>220</TopLine>
-      <CurrentLine>229</CurrentLine>
+      <TopLine>55</TopLine>
+      <CurrentLine>55</CurrentLine>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\atom.c</PathWithFileName>
-      <FilenameWithoutPath>atom.c</FilenameWithoutPath>
+      <PathWithFileName>.\para.c</PathWithFileName>
+      <FilenameWithoutPath>para.c</FilenameWithoutPath>
     </File>
     <File>
       <GroupNumber>6</GroupNumber>
@@ -1231,11 +1231,11 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>2294</TopLine>
-      <CurrentLine>2302</CurrentLine>
+      <TopLine>437</TopLine>
+      <CurrentLine>448</CurrentLine>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\area.c</PathWithFileName>
-      <FilenameWithoutPath>area.c</FilenameWithoutPath>
+      <PathWithFileName>.\atom.c</PathWithFileName>
+      <FilenameWithoutPath>atom.c</FilenameWithoutPath>
     </File>
     <File>
       <GroupNumber>6</GroupNumber>
@@ -1245,11 +1245,11 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>899</TopLine>
-      <CurrentLine>903</CurrentLine>
+      <TopLine>1829</TopLine>
+      <CurrentLine>1836</CurrentLine>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\page.c</PathWithFileName>
-      <FilenameWithoutPath>page.c</FilenameWithoutPath>
+      <PathWithFileName>.\area.c</PathWithFileName>
+      <FilenameWithoutPath>area.c</FilenameWithoutPath>
     </File>
     <File>
       <GroupNumber>6</GroupNumber>
@@ -1257,10 +1257,24 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>18</ColumnNumber>
+      <ColumnNumber>22</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>15</TopLine>
-      <CurrentLine>22</CurrentLine>
+      <TopLine>281</TopLine>
+      <CurrentLine>285</CurrentLine>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\page.c</PathWithFileName>
+      <FilenameWithoutPath>page.c</FilenameWithoutPath>
+    </File>
+    <File>
+      <GroupNumber>6</GroupNumber>
+      <FileNumber>32</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <Focus>0</Focus>
+      <ColumnNumber>0</ColumnNumber>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <TopLine>0</TopLine>
+      <CurrentLine>0</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\KeyResponse.c</PathWithFileName>
       <FilenameWithoutPath>KeyResponse.c</FilenameWithoutPath>
@@ -1268,35 +1282,9 @@
   </Group>
 
   <AlienFiles>
-    <PathWithFilename>F:\电动执行机构2\CODE\Git\Valve_4_add_modbus_control   screen\USER\page.h</PathWithFilename>
-    <TopLine>2</TopLine>
-    <CurrentLine>5</CurrentLine>
-    <Constant>0</Constant>
-    <WindowPosition>
-      <length>0</length>
-      <flags>0</flags>
-      <showCmd>0</showCmd>
-      <MinPosition>
-        <xPos>0</xPos>
-        <yPos>0</yPos>
-      </MinPosition>
-      <MaxPosition>
-        <xPos>0</xPos>
-        <yPos>0</yPos>
-      </MaxPosition>
-      <NormalPosition>
-        <Top>0</Top>
-        <Left>0</Left>
-        <Right>0</Right>
-        <Bottom>0</Bottom>
-      </NormalPosition>
-    </WindowPosition>
-  </AlienFiles>
-
-  <AlienFiles>
-    <PathWithFilename>F:\电动执行机构2\CODE\Git\Valve_4_add_modbus_control   screen\USER\area.h</PathWithFilename>
+    <PathWithFilename>F:\电动执行机构2\CODE\Git\Valve_4_add_modbus_control   screen\USER\usart.h</PathWithFilename>
     <TopLine>1</TopLine>
-    <CurrentLine>1</CurrentLine>
+    <CurrentLine>3</CurrentLine>
     <Constant>0</Constant>
     <WindowPosition>
       <length>0</length>
@@ -1320,9 +1308,9 @@
   </AlienFiles>
 
   <AlienFiles>
-    <PathWithFilename>F:\电动执行机构2\CODE\Git\Valve_4_add_modbus_control   screen\CMSIS\stm32f10x.h</PathWithFilename>
-    <TopLine>163</TopLine>
-    <CurrentLine>166</CurrentLine>
+    <PathWithFilename>F:\电动执行机构2\CODE\Git\Valve_4_add_modbus_control   screen\USER\modbus.h</PathWithFilename>
+    <TopLine>1</TopLine>
+    <CurrentLine>4</CurrentLine>
     <Constant>0</Constant>
     <WindowPosition>
       <length>0</length>
@@ -1347,216 +1335,8 @@
 
   <AlienFiles>
     <PathWithFilename>F:\电动执行机构2\CODE\Git\Valve_4_add_modbus_control   screen\USER\oled.h</PathWithFilename>
-    <TopLine>85</TopLine>
+    <TopLine>82</TopLine>
     <CurrentLine>88</CurrentLine>
-    <Constant>0</Constant>
-    <WindowPosition>
-      <length>0</length>
-      <flags>0</flags>
-      <showCmd>0</showCmd>
-      <MinPosition>
-        <xPos>0</xPos>
-        <yPos>0</yPos>
-      </MinPosition>
-      <MaxPosition>
-        <xPos>0</xPos>
-        <yPos>0</yPos>
-      </MaxPosition>
-      <NormalPosition>
-        <Top>0</Top>
-        <Left>0</Left>
-        <Right>0</Right>
-        <Bottom>0</Bottom>
-      </NormalPosition>
-    </WindowPosition>
-  </AlienFiles>
-
-  <AlienFiles>
-    <PathWithFilename>F:\电动执行机构2\CODE\Git\Valve_4_add_modbus_control   screen\USER\led.h</PathWithFilename>
-    <TopLine>1</TopLine>
-    <CurrentLine>1</CurrentLine>
-    <Constant>0</Constant>
-    <WindowPosition>
-      <length>0</length>
-      <flags>0</flags>
-      <showCmd>0</showCmd>
-      <MinPosition>
-        <xPos>0</xPos>
-        <yPos>0</yPos>
-      </MinPosition>
-      <MaxPosition>
-        <xPos>0</xPos>
-        <yPos>0</yPos>
-      </MaxPosition>
-      <NormalPosition>
-        <Top>0</Top>
-        <Left>0</Left>
-        <Right>0</Right>
-        <Bottom>0</Bottom>
-      </NormalPosition>
-    </WindowPosition>
-  </AlienFiles>
-
-  <AlienFiles>
-    <PathWithFilename>F:\电动执行机构2\CODE\Git\Valve_4_add_modbus_control   screen\USER\fault.h</PathWithFilename>
-    <TopLine>1</TopLine>
-    <CurrentLine>10</CurrentLine>
-    <Constant>0</Constant>
-    <WindowPosition>
-      <length>0</length>
-      <flags>0</flags>
-      <showCmd>0</showCmd>
-      <MinPosition>
-        <xPos>0</xPos>
-        <yPos>0</yPos>
-      </MinPosition>
-      <MaxPosition>
-        <xPos>0</xPos>
-        <yPos>0</yPos>
-      </MaxPosition>
-      <NormalPosition>
-        <Top>0</Top>
-        <Left>0</Left>
-        <Right>0</Right>
-        <Bottom>0</Bottom>
-      </NormalPosition>
-    </WindowPosition>
-  </AlienFiles>
-
-  <AlienFiles>
-    <PathWithFilename>F:\电动执行机构2\CODE\Git\Valve_4_add_modbus_control   screen\USER\time_test.h</PathWithFilename>
-    <TopLine>1</TopLine>
-    <CurrentLine>1</CurrentLine>
-    <Constant>0</Constant>
-    <WindowPosition>
-      <length>0</length>
-      <flags>0</flags>
-      <showCmd>0</showCmd>
-      <MinPosition>
-        <xPos>0</xPos>
-        <yPos>0</yPos>
-      </MinPosition>
-      <MaxPosition>
-        <xPos>0</xPos>
-        <yPos>0</yPos>
-      </MaxPosition>
-      <NormalPosition>
-        <Top>0</Top>
-        <Left>0</Left>
-        <Right>0</Right>
-        <Bottom>0</Bottom>
-      </NormalPosition>
-    </WindowPosition>
-  </AlienFiles>
-
-  <AlienFiles>
-    <PathWithFilename>F:\电动执行机构2\CODE\Git\Valve_4_add_modbus_control   screen\USER\atom.h</PathWithFilename>
-    <TopLine>5</TopLine>
-    <CurrentLine>13</CurrentLine>
-    <Constant>0</Constant>
-    <WindowPosition>
-      <length>0</length>
-      <flags>0</flags>
-      <showCmd>0</showCmd>
-      <MinPosition>
-        <xPos>0</xPos>
-        <yPos>0</yPos>
-      </MinPosition>
-      <MaxPosition>
-        <xPos>0</xPos>
-        <yPos>0</yPos>
-      </MaxPosition>
-      <NormalPosition>
-        <Top>0</Top>
-        <Left>0</Left>
-        <Right>0</Right>
-        <Bottom>0</Bottom>
-      </NormalPosition>
-    </WindowPosition>
-  </AlienFiles>
-
-  <AlienFiles>
-    <PathWithFilename>F:\电动执行机构2\CODE\Git\Valve_4_add_modbus_control   screen\USER\para.h</PathWithFilename>
-    <TopLine>140</TopLine>
-    <CurrentLine>144</CurrentLine>
-    <Constant>0</Constant>
-    <WindowPosition>
-      <length>0</length>
-      <flags>0</flags>
-      <showCmd>0</showCmd>
-      <MinPosition>
-        <xPos>0</xPos>
-        <yPos>0</yPos>
-      </MinPosition>
-      <MaxPosition>
-        <xPos>0</xPos>
-        <yPos>0</yPos>
-      </MaxPosition>
-      <NormalPosition>
-        <Top>0</Top>
-        <Left>0</Left>
-        <Right>0</Right>
-        <Bottom>0</Bottom>
-      </NormalPosition>
-    </WindowPosition>
-  </AlienFiles>
-
-  <AlienFiles>
-    <PathWithFilename>F:\电动执行机构2\CODE\Git\Valve_4_add_modbus_control   screen\USER\io.h</PathWithFilename>
-    <TopLine>16</TopLine>
-    <CurrentLine>19</CurrentLine>
-    <Constant>0</Constant>
-    <WindowPosition>
-      <length>0</length>
-      <flags>0</flags>
-      <showCmd>0</showCmd>
-      <MinPosition>
-        <xPos>0</xPos>
-        <yPos>0</yPos>
-      </MinPosition>
-      <MaxPosition>
-        <xPos>0</xPos>
-        <yPos>0</yPos>
-      </MaxPosition>
-      <NormalPosition>
-        <Top>0</Top>
-        <Left>0</Left>
-        <Right>0</Right>
-        <Bottom>0</Bottom>
-      </NormalPosition>
-    </WindowPosition>
-  </AlienFiles>
-
-  <AlienFiles>
-    <PathWithFilename>F:\电动执行机构2\CODE\Git\Valve_4_add_modbus_control   screen\USER\ssr.h</PathWithFilename>
-    <TopLine>1</TopLine>
-    <CurrentLine>2</CurrentLine>
-    <Constant>0</Constant>
-    <WindowPosition>
-      <length>0</length>
-      <flags>0</flags>
-      <showCmd>0</showCmd>
-      <MinPosition>
-        <xPos>0</xPos>
-        <yPos>0</yPos>
-      </MinPosition>
-      <MaxPosition>
-        <xPos>0</xPos>
-        <yPos>0</yPos>
-      </MaxPosition>
-      <NormalPosition>
-        <Top>0</Top>
-        <Left>0</Left>
-        <Right>0</Right>
-        <Bottom>0</Bottom>
-      </NormalPosition>
-    </WindowPosition>
-  </AlienFiles>
-
-  <AlienFiles>
-    <PathWithFilename>F:\电动执行机构2\CODE\Git\Valve_4_add_modbus_control   screen\USER\key.h</PathWithFilename>
-    <TopLine>25</TopLine>
-    <CurrentLine>28</CurrentLine>
     <Constant>0</Constant>
     <WindowPosition>
       <length>0</length>
@@ -1584,217 +1364,73 @@
     <ActiveMDIGroup>0</ActiveMDIGroup>
     <MDIGroup>
       <Size>100</Size>
-      <ActiveTab>0</ActiveTab>
+      <ActiveTab>6</ActiveTab>
       <Documents>
         <Doc>
-          <Name>.\main.c</Name>
-          <ColumnNumber>2</ColumnNumber>
-          <TopLine>265</TopLine>
-          <CurrentLine>265</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>.\stm32f10x_it.c</Name>
-          <ColumnNumber>29</ColumnNumber>
-          <TopLine>59</TopLine>
-          <CurrentLine>59</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>.\KeyResponse.c</Name>
-          <ColumnNumber>18</ColumnNumber>
-          <TopLine>15</TopLine>
+          <Name>.\modbus.c</Name>
+          <ColumnNumber>3</ColumnNumber>
+          <TopLine>10</TopLine>
           <CurrentLine>22</CurrentLine>
         </Doc>
         <Doc>
-          <Name>..\CMSIS\startup\startup_stm32f10x_md.s</Name>
-          <ColumnNumber>0</ColumnNumber>
-          <TopLine>131</TopLine>
-          <CurrentLine>131</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>key.h</Name>
-          <ColumnNumber>21</ColumnNumber>
-          <TopLine>25</TopLine>
-          <CurrentLine>28</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>ssr.h</Name>
-          <ColumnNumber>59</ColumnNumber>
-          <TopLine>1</TopLine>
-          <CurrentLine>2</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>io.h</Name>
-          <ColumnNumber>8</ColumnNumber>
-          <TopLine>16</TopLine>
-          <CurrentLine>19</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>.\SysTick.c</Name>
-          <ColumnNumber>19</ColumnNumber>
-          <TopLine>38</TopLine>
-          <CurrentLine>38</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>.\fault.c</Name>
-          <ColumnNumber>18</ColumnNumber>
-          <TopLine>137</TopLine>
-          <CurrentLine>137</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>..\FWlib\src\stm32f10x_tim.c</Name>
-          <ColumnNumber>27</ColumnNumber>
-          <TopLine>2627</TopLine>
-          <CurrentLine>2627</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>..\FWlib\src\stm32f10x_usart.c</Name>
-          <ColumnNumber>0</ColumnNumber>
-          <TopLine>340</TopLine>
-          <CurrentLine>348</CurrentLine>
-        </Doc>
-        <Doc>
           <Name>.\usart.c</Name>
-          <ColumnNumber>0</ColumnNumber>
-          <TopLine>340</TopLine>
-          <CurrentLine>348</CurrentLine>
+          <ColumnNumber>31</ColumnNumber>
+          <TopLine>265</TopLine>
+          <CurrentLine>271</CurrentLine>
         </Doc>
         <Doc>
-          <Name>.\io.c</Name>
-          <ColumnNumber>11</ColumnNumber>
-          <TopLine>59</TopLine>
-          <CurrentLine>68</CurrentLine>
+          <Name>modbus.h</Name>
+          <ColumnNumber>16</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>4</CurrentLine>
         </Doc>
         <Doc>
-          <Name>.\current.c</Name>
-          <ColumnNumber>38</ColumnNumber>
-          <TopLine>70</TopLine>
-          <CurrentLine>74</CurrentLine>
+          <Name>usart.h</Name>
+          <ColumnNumber>18</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>3</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\main.c</Name>
+          <ColumnNumber>70</ColumnNumber>
+          <TopLine>224</TopLine>
+          <CurrentLine>231</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\wordlib.c</Name>
+          <ColumnNumber>164</ColumnNumber>
+          <TopLine>739</TopLine>
+          <CurrentLine>753</CurrentLine>
         </Doc>
         <Doc>
           <Name>.\page.c</Name>
-          <ColumnNumber>0</ColumnNumber>
-          <TopLine>899</TopLine>
-          <CurrentLine>903</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>para.h</Name>
-          <ColumnNumber>0</ColumnNumber>
-          <TopLine>140</TopLine>
-          <CurrentLine>144</CurrentLine>
+          <ColumnNumber>38</ColumnNumber>
+          <TopLine>281</TopLine>
+          <CurrentLine>282</CurrentLine>
         </Doc>
         <Doc>
           <Name>.\para.c</Name>
-          <ColumnNumber>14</ColumnNumber>
-          <TopLine>45</TopLine>
-          <CurrentLine>45</CurrentLine>
+          <ColumnNumber>46</ColumnNumber>
+          <TopLine>55</TopLine>
+          <CurrentLine>55</CurrentLine>
         </Doc>
         <Doc>
-          <Name>atom.h</Name>
+          <Name>.\atom.c</Name>
           <ColumnNumber>0</ColumnNumber>
-          <TopLine>5</TopLine>
-          <CurrentLine>13</CurrentLine>
+          <TopLine>437</TopLine>
+          <CurrentLine>448</CurrentLine>
         </Doc>
         <Doc>
           <Name>.\area.c</Name>
           <ColumnNumber>0</ColumnNumber>
-          <TopLine>2294</TopLine>
-          <CurrentLine>2302</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>.\atom.c</Name>
-          <ColumnNumber>6</ColumnNumber>
-          <TopLine>220</TopLine>
-          <CurrentLine>229</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>.\OLED.c</Name>
-          <ColumnNumber>0</ColumnNumber>
-          <TopLine>981</TopLine>
-          <CurrentLine>987</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>.\wordlib.c</Name>
-          <ColumnNumber>92</ColumnNumber>
-          <TopLine>784</TopLine>
-          <CurrentLine>784</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>..\FWlib\src\stm32f10x_gpio.c</Name>
-          <ColumnNumber>28</ColumnNumber>
-          <TopLine>372</TopLine>
-          <CurrentLine>372</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>.\Time_test.c</Name>
-          <ColumnNumber>0</ColumnNumber>
-          <TopLine>118</TopLine>
-          <CurrentLine>121</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>time_test.h</Name>
-          <ColumnNumber>22</ColumnNumber>
-          <TopLine>1</TopLine>
-          <CurrentLine>1</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>.\SSR.c</Name>
-          <ColumnNumber>15</ColumnNumber>
-          <TopLine>49</TopLine>
-          <CurrentLine>52</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>.\PWM.C</Name>
-          <ColumnNumber>0</ColumnNumber>
-          <TopLine>28</TopLine>
-          <CurrentLine>31</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>fault.h</Name>
-          <ColumnNumber>21</ColumnNumber>
-          <TopLine>1</TopLine>
-          <CurrentLine>10</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>led.h</Name>
-          <ColumnNumber>12</ColumnNumber>
-          <TopLine>1</TopLine>
-          <CurrentLine>1</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>.\led.c</Name>
-          <ColumnNumber>0</ColumnNumber>
-          <TopLine>1</TopLine>
-          <CurrentLine>1</CurrentLine>
+          <TopLine>1829</TopLine>
+          <CurrentLine>1836</CurrentLine>
         </Doc>
         <Doc>
           <Name>oled.h</Name>
-          <ColumnNumber>36</ColumnNumber>
-          <TopLine>85</TopLine>
+          <ColumnNumber>22</ColumnNumber>
+          <TopLine>82</TopLine>
           <CurrentLine>88</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>..\CMSIS\stm32f10x.h</Name>
-          <ColumnNumber>13</ColumnNumber>
-          <TopLine>163</TopLine>
-          <CurrentLine>166</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>.\key.c</Name>
-          <ColumnNumber>0</ColumnNumber>
-          <TopLine>160</TopLine>
-          <CurrentLine>163</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>area.h</Name>
-          <ColumnNumber>0</ColumnNumber>
-          <TopLine>1</TopLine>
-          <CurrentLine>1</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>page.h</Name>
-          <ColumnNumber>44</ColumnNumber>
-          <TopLine>2</TopLine>
-          <CurrentLine>5</CurrentLine>
         </Doc>
       </Documents>
     </MDIGroup>

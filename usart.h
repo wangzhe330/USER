@@ -47,6 +47,8 @@ void GetEncoderPara(void);
 
 void EncoderCommEnd(void);
 
+
+
 #endif
 
 

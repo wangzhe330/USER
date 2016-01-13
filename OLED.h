@@ -85,7 +85,7 @@ extern unsigned  char zhang[32];
 extern unsigned  char qi[32];
 extern unsigned  char ta[32];
 extern unsigned char chinese[172][32];
-extern unsigned  char english[43][16];
+extern unsigned  char english[49][16];
 
 extern unsigned char op[32];
 extern unsigned char opin[32];
